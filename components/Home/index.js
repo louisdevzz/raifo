@@ -1,4 +1,5 @@
 import Header from "../component/Header"
+import Footer from "../Footer"
 
 export default function Home(){
     return(
@@ -12,6 +13,7 @@ export default function Home(){
                     <p>The TTU Journal of Biomedical Sciences (TJBS) is a new peer-reviewed journal covering all areas of Biomedical Research published by Tan Tao University. The TJBS aims to launch the first issue in October 2022. We expect you could make an excellent contribution based on your expertise and recent achievements in the following areas: clinical science, dental, nursing, other related medical fields, and biotechnology.</p>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
