@@ -5,10 +5,9 @@ import { useState } from 'react';
 
 export default function HeaderMobile({setOpen}){
     return(
-        <div>
-            <div
+        <div
             role="dialog"
-            class="fixed z-50 overscroll-none overflow-hidden gap-4 bg-white py-6 px-3 shadow-lg inset-y-0 right-0 h-full border-l ease-in-out duration-500 transition sm:max-w-sm w-[100%] sm:max-lg:max-w-[75%] md:max-w-[50%]"
+            class="z-50 absolute overflow-auto overscroll-auto gap-4 bg-white py-6 px-3 shadow-lg inset-y-0 right-0 h-screen border-l ease-in-out duration-500 transition sm:max-w-sm w-[100%] sm:max-lg:max-w-[75%] md:max-w-[50%]"
             tabindex="-1"
             style={{ pointerEvents: "auto", width: "100%" }}
             >
@@ -101,7 +100,6 @@ export default function HeaderMobile({setOpen}){
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 
