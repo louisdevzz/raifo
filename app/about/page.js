@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function AboutUS(){
     const [open,setOpen] = useState(false)
     return(
-        <div>
+        <div className={`${open?"fixed":""}`}>
             <Header open={open} setOpen={setOpen}/>
             <About/>
         </div>
