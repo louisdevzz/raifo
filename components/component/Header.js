@@ -1,12 +1,12 @@
 "use client"
+import { useState } from "react";
 import SubHeader from "./SubHeader";
-import { Raleway } from "next/font/google";
-import CIcon from '@coreui/icons-react'
-import { cilMenu } from '@coreui/icons'
+import { Roboto } from "next/font/google";
+import HeaderMobile from "./HeaderMobile";
 
-const raleway = Raleway({ subsets: ["latin"],weight:"800" });
+const roboto = Roboto({ subsets: ["latin"],weight:"700" });
 
-export default function Header(){
+export default function Header({open,setOpen}){
     return(
         <div>
             <div className="bg-gradient-to-r from-white to-[#2878cf]">
@@ -15,11 +15,11 @@ export default function Header(){
                         <a href="/">
                             <img src="/images/logo_ttu.png" className="md:w-[120px] md:ml-2 w-[80px]"/>
                         </a>
-                        <div className="md:ml-[60px] ml-[100px] hidden md:block text-[#183762] text-center text-xl font-semibold">
-                            <div className={`${raleway.className} drop-shadow-md`}>PHÒNG QUẢN LÝ KHOA HỌC VÀ HỢP TÁC QUỐC TẾ</div>
-                            <div className={`${raleway.className} drop-shadow-md`}>RESEARCH ADMINISTRATION AND INTERNATIONAL RELATION OFFICE</div>
+                        <div className="md:ml-[60px] hidden md:block text-[#183762] text-center text-xl font-semibold">
+                            <div className={`${roboto.className} drop-shadow-md`}>PHÒNG QUẢN LÝ KHOA HỌC VÀ HỢP TÁC QUỐC TẾ</div>
+                            <div className={`${roboto.className} drop-shadow-md`}>RESEARCH ADMINISTRATION AND INTERNATIONAL RELATION OFFICE</div>
                         </div>
-                        <div className="md:ml-[80px] flex flex-row gap-5 items-center justify-center">
+                        <div className="md:ml-[80px] ml-12 flex flex-row gap-5 items-center justify-center">
                             <div className="relative flex items-center w-full h-8 rounded-2xl focus-within:shadow-lg bg-white overflow-hidden">
                                 <div className="grid place-items-center h-full w-12 text-gray-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,18 +34,19 @@ export default function Header(){
                                 placeholder="Tìm kiếm" /> 
                             </div>
                             <div className="md:hidden block">
-                                <CIcon icon={cilMenu} className="w-[30px] text-[#183762]"/>
+                                <button className="mt-2" onClick={()=>setOpen(true)}>
+                                    <img src="/images/menu.svg" width={45} className="text-[#183762]"/>
+                                </button>
                             </div>
                             <div className="w-full hidden mt-2 md:flex items-center justify-center">
                                 <button type="button" className="text-white  bg-[#1a5fb4] hover:bg-[#164b8e] focus:outline-none focus:ring-4 focus:ring-blue-300 font-bold rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Đăng nhập / Đăng ký</button>
                             </div>
-                            
                         </div>
-
                     </div>
                 </div>
             </div>
             <SubHeader/>
+            {open&&<HeaderMobile setOpen={setOpen}/>}
         </div>
     )
 }

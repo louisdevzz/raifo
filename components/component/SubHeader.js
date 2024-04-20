@@ -39,7 +39,7 @@ export default function SubHeader(){
                     url:"#"
                 },
                 {
-                    name:"Tin tức – sự kiện",
+                    name:"Tin tức - sự kiện",
                     url:"#"
                 }
             ]
@@ -94,7 +94,7 @@ export default function SubHeader(){
                     <DropDownMenu title={"Quản lý khoa học"} children={SManagement}/>
                 </li>
                 <li className='relative group'>
-                    <DropDownMenu title={"Họp tác quốc tế"} children={InalCooperation}/>
+                    <DropDownMenu title={"Hợp tác quốc tế"} children={InalCooperation}/>
                 </li>
                 <li>
                     <a href='#'>
@@ -109,7 +109,10 @@ export default function SubHeader(){
 const DropDownMenu = ({title,children}) =>{
     return(
         <div className='duration-500 transition-all'>
-            <div className='cursor-pointer py-2'>{title}</div>
+            <div className='cursor-pointer py-2 flex flex-row gap-2 items-center'>
+                <span>{title}</span>
+                <img src='/images/arrow-down.svg' width={10}/>
+            </div>
             <div className='absolute w-[170px] invisible group-hover:visible border-t-4 bg-white drop-shadow-xl border-[#183762]  text-sm leading-loose'>
                 <ul className='relative z-10'>
                     {children.map((dt,index)=>{
