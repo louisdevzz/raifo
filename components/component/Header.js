@@ -1,12 +1,12 @@
 "use client"
-import { useState } from "react";
 import SubHeader from "./SubHeader";
 import { Roboto } from "next/font/google";
 import HeaderMobile from "./HeaderMobile";
+import Modal from "./Modal";
 
 const roboto = Roboto({ subsets: ["latin"],weight:"700" });
 
-export default function Header({open,setOpen}){
+export default function Header({open,setOpen,isShow,setIsShow}){
     return(
         <div>
             <div className="bg-gradient-to-r from-white to-[#2878cf]">
@@ -39,14 +39,15 @@ export default function Header({open,setOpen}){
                                 </button>
                             </div>
                             <div className="w-full hidden mt-2 md:flex items-center justify-center">
-                                <button type="button" className="text-white  bg-[#1a5fb4] hover:bg-[#164b8e] focus:outline-none focus:ring-4 focus:ring-blue-300 font-bold rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Đăng nhập / Đăng ký</button>
+                                <button type="button" onClick={()=>setIsShow(!isShow)} className="text-white  bg-[#1a5fb4] hover:bg-[#164b8e] focus:outline-none focus:ring-4 focus:ring-blue-300 font-bold rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Đăng nhập / Đăng ký</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <SubHeader/>
-            {open&&<HeaderMobile setOpen={setOpen}/>}
+            {isShow&&<Modal setIsShow={setIsShow}/>}
+            {open&&<HeaderMobile setOpen={setOpen} setIsShow={setIsShow}/>}
         </div>
     )
 }

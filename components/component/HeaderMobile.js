@@ -3,7 +3,7 @@ import CIcon from '@coreui/icons-react';
 import { cilHome } from '@coreui/icons';
 import { useState } from 'react';
 
-export default function HeaderMobile({setOpen}){
+export default function HeaderMobile({setOpen,setIsShow}){
     return(
         <div
             role="dialog"
@@ -27,10 +27,10 @@ export default function HeaderMobile({setOpen}){
                     <div className="mt-[30px] flex flex-col justify-center items-center">
                         <div className="flex flex-row items-center gap-3">
                             <div className="bg-gray-700 p-1 w-12 rounded-full">
-                                <img src="/images/avatar.svg" width={50}/>
+                                <img src="/images/avatar.svg" width={40}/>
                             </div>
-                            <button role='button'>
-                                <p className="font-bold text-2xl text-[#183762]">Đăng nhập / Đăng ký</p>
+                            <button role='button' onClick={()=>{setOpen(false);setIsShow(true)}}>
+                                <p className="font-bold text-xl text-[#183762]">Đăng nhập / Đăng ký</p>
                             </button>
                         </div>
                     </div>

@@ -4,10 +4,14 @@ import Footer from "../Footer"
 import { useState } from "react"
 
 export default function Home(){
-    const [open,setOpen] = useState(false)
+    const [open,setOpen] = useState(false);
+    const [isShow,setIsShow] = useState(false);
+
+    const isOpen = isShow?isShow:open;
+
     return(
-        <div className={`${open?"fixed":""}`}>
-            <Header open={open} setOpen={setOpen}/>
+        <div className={`${isOpen?"fixed":""}`}>
+            <Header open={open} setOpen={setOpen} setIsShow={setIsShow} isShow={isShow}/>
             <div className="container max-w-screen-3xl mx-auto flex flex-col justify-center items-center px-3 md:px-[75px]">
                 <div className="md:mt-12 mt-2">
                     <img src="https://tjbs.ttuscience.org/public/journals/2/homepageImage_en_US.jpg"/>
