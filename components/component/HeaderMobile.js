@@ -109,7 +109,7 @@ const DropDownMenu = ({children,title,options}) => {
         <div>
             <button onClick={()=>setOpen(!open)} className={`flex flex-row gap-3 justify-between items-center ${options?"text-lg py-2":"text-xl px-1 mt-1 py-3 text-[#183762] font-semibold "} border-b border-[#183762] w-full`}>
                 <p>{title}</p>
-                <img src="/images/arrow-down.svg" width={options?12:15} />
+                {open?<img src="/images/arrow-up.svg" width={options?18:22} className='mr-2'/>:<img src="/images/arrow-down.svg" width={options?12:15} className='mr-2'/>}
             </button>
             {open&&<div className='px-1 py-1 bg-[#f6f5f4]'>
             <div className='ml-10'>
