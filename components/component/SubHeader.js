@@ -132,16 +132,15 @@ const DropDownMenu = ({title,children}) =>{
     )
 }
 
-const DropDownMenuChildren = ({title,children}) =>{
-    console.log(children)
+const DropDownMenuChildren = ({title,children,i}) =>{
     return(
         <div>
             <div className='group/item'>
                 <div className='cursor-pointer py-2 hover:bg-[#183762] hover:text-white px-2'>{title}</div>
                 <div className='absolute w-[250px] translate-x-[170px] -translate-y-[48px] invisible group-hover/item:visible border-t-4 bg-white drop-shadow-xl border-[#183762]  text-sm leading-loose'>
                     <ul className='z-10'>
-                        {children.map((dt)=>(
-                            <li className='hover:bg-[#183762] hover:text-white px-3 py-2'><a href={dt.url}>{dt.name}</a></li>
+                        {children.map((dt,index)=>(
+                            <li key={index} className='hover:bg-[#183762] hover:text-white px-3 py-2'><a href={dt.url}>{dt.name}</a></li>
                         ))}
                     </ul>
                 </div>
