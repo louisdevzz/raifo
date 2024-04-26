@@ -1,7 +1,7 @@
 export default function Modal({setIsShow,title,children}){
 
     return(
-        <div tabindex="-1" class="fixed bg-black transition duration-300 ease-in-out bg-opacity-75 z-50 flex justify-center items-center overscroll-none inset-0 h-full overflow-hidden max-h-full">
+        <div class="fixed bg-black transition duration-300 ease-in-out bg-opacity-75 z-50 flex justify-center items-center inset-0 h-full max-h-full">
                 <div class="relative p-4 w-full max-w-lg max-h-full text-white">
                     <div class="relative bg-gradient-to-r from-blue-800 to-indigo-900 rounded-lg shadow dark:bg-gray-700">
                         <div class="flex items-center justify-center p-4 md:p-5 rounded-t dark:border-gray-600">

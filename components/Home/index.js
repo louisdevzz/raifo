@@ -10,7 +10,7 @@ export default function Home(){
     const isOpen = isShow?isShow:open;
 
     return(
-        <div className={`${isOpen?"fixed":""}`}>
+        <div className={`${isOpen?"fixed right-0 left-0":""}`}>
             <Header open={open} setOpen={setOpen} setIsShow={setIsShow} isShow={isShow}/>
             <div className="container max-w-screen-3xl mx-auto flex flex-col justify-center items-center px-3 md:px-[75px]">
                 <div className="md:mt-12 mt-2">
