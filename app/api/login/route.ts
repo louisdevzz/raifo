@@ -1,6 +1,6 @@
 import { checkLogin } from "../../../database/user";
 
-export async function POST(req) {
+export async function POST(req: Request) {
   try{
     const { user,pass } = await req.json();
     const result = await checkLogin(user,pass)

@@ -36,9 +36,9 @@ export default function HeaderMobile({setOpen,setIsShow}){
                     </div>
                     <div className="mt-10 flex flex-col justify-start">
                         <div className="px-1 py-2 text-xl border-b border-[#183762] font-semibold text-[#183762]">
-                            <p>
+                            <div>
                                 <a href="/about">Thông tin chung</a>
-                            </p>
+                            </div>
                         </div>
                         <DropDownMenu title={"Tạp chí khoa học"}>
                             <p className='text-lg border-b border-[#867770] py-1'>

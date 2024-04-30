@@ -13,60 +13,60 @@ export default function Footer(){
                         <div className="flex flex-col">
                             <h1 className={`${Title} text-xl py-2 border-b border-[#6a6764] w-[250px]`}>Thông Tin</h1>
                             <div className="mt-5">
-                                <p><a href="/about">Thông Tin Chung</a></p>
+                                <div><a href="/about">Thông Tin Chung</a></div>
                             </div>
                         </div>
                         <div className="flex flex-col">
                             <h1 className={`${Title} text-xl py-2 border-b border-[#6a6764] w-[250px]`}>Tạp Chí Khoa Học</h1>
                             <div className="mt-5">
-                                <p>
+                                <div>
                                     <a href="https://review.ttu.edu.vn/index.php/review/index">TTU Review</a>
-                                </p>
-                                <p className="mt-2">
+                                </div>
+                                <div className="mt-2">
                                     <a href="https://tjbs.ttuscience.org/index.php/tjbs">TJBS</a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-col">
                             <h1 className={`${Title} text-xl py-2 border-b border-[#6a6764] w-[250px]`}>Công Trình Nghiên Cứu</h1>
                             <div className="mt-5">
-                                <p>
+                                <div>
                                     <a href="#">Bài báo khoa học</a>
-                                </p>
-                                <p className="mt-2">
+                                </div>
+                                <div className="mt-2">
                                     <a href="#">Bài báo hội thảo</a>
-                                </p>
-                                <p className="mt-2">
+                                </div>
+                                <div className="mt-2">
                                     <a href="#">Đề tài nghiên cứu</a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-col">
                             <h1 className={`${Title} text-xl py-2 border-b border-[#6a6764] w-[250px]`}>Hoạt Động Khoa Học</h1>
                             <div className="mt-5">
-                                <p>
+                                <div>
                                     <a href="#">Seminar</a>
-                                </p>
-                                <p className="mt-2">
+                                </div>
+                                <div className="mt-2">
                                     <a href="#">Tin tức - Sự kiện</a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-col">
                             <h1 className={`${Title} text-xl py-2 border-b border-[#6a6764] w-[250px]`}>Hợp Tác Quốc Tế</h1>
                             <div className="mt-5">
-                                <p>
+                                <div>
                                     <a href="#">Chương trình hợp tác quốc tế</a>
-                                </p>
-                                <p className="mt-2">
+                                </div>
+                                <div className="mt-2">
                                     <a href="#">Mạng lưới hợp tác quốc tế</a>
-                                </p>
-                                <p className="mt-2">
+                                </div>
+                                <div className="mt-2">
                                     <a href="#">Dự án quốc tế</a>
-                                </p>
-                                <p className="mt-2">
+                                </div>
+                                <div className="mt-2">
                                     <a href="#">Trao đổi sinh viên</a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
