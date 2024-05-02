@@ -56,6 +56,11 @@ export default function Home(){
                                     <strong className="mr-2">225.</strong>
                                     <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
                                 </div>
+                                <div className="mt-4 border-t border-[#2a5389] text-right">
+                                    <a href="#">
+                                        <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,6 +69,25 @@ export default function Home(){
                             <div className="border border-gray-200">
                                 <div className="text-center border-t-2 border-[#183762] py-3">
                                     <h1 className="font-bold">ĐỀ TÀI NGHIÊN CỨU</h1>
+                                </div>
+                            </div>
+                            <div className="mt-5 flex flex-col gap-5 text-base">
+                                <div className="font-medium">
+                                    <p>{formatString("Kiến thức, thái độ và thực hành về tiêm phòng cúm mùa của sinh viên Khoa Y Trường Đại học Tân Tạo.")}</p>
+                                </div>
+                                <div className="font-medium">
+                                    <p>{formatString("Tổng hợp nano bạc bằng phương pháp sinh học sử dụng dịch chiết của thực vật và khảo sát hoạt tính kháng khuẩn của hạt nano.")}</p>
+                                </div>
+                                <div className="font-medium">
+                                    <p>{formatString("Tổng hợp nano bạc bằng phương pháp sinh học sử dụng dịch chiết của thực vật và khảo sát hoạt tính kháng khuẩn của hạt nano.")}</p>
+                                </div>
+                                <div className="font-medium">
+                                    <p>{formatString("Tổng hợp nano bạc bằng phương pháp sinh học sử dụng dịch chiết của thực vật và khảo sát hoạt tính kháng khuẩn của hạt nano.")}</p>
+                                </div>
+                                <div className="mt-2 border-t border-[#2a5389] text-right">
+                                    <a href="#">
+                                        <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
