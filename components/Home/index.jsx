@@ -1,5 +1,20 @@
 'use client'
 export default function Home(){
+    function formatString(str){
+        if(str.length > 63){
+            return str.slice(0,63)+"..."
+        }else{
+            return str;
+        }
+    }
+    
+    function formatStringDescription(str){
+        if(str.length > 159){
+            return str.slice(0,159)+"..."
+        }else{
+            return str;
+        }
+    }
     return(
         <div>
             <div className="md:mt-10 mt-2">
@@ -86,18 +101,4 @@ export default function Home(){
     )
 }
 
-function formatString(str){
-    if(str.length > 63){
-        return str.slice(0,63)+"..."
-    }else{
-        return str;
-    }
-}
 
-function formatStringDescription(str){
-    if(str.length > 159){
-        return str.slice(0,159)+"..."
-    }else{
-        return str;
-    }
-}

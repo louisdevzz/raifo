@@ -1,4 +1,4 @@
-export default function BaiBaoKhoaHoc(){
+export default function DeTaiNghienCuu(){
     function formatString(str){
         if(str.length > 63){
             return str.slice(0,63)+"..."
@@ -20,7 +20,7 @@ export default function BaiBaoKhoaHoc(){
                 <div className="flex justify-start items-start">
                     <div className="border border-gray-200 w-full">
                         <div className="text-center border-t-2 border-[#183762] py-3">
-                            <h1 className="font-bold">BÀI BÁO KHOA HỌC</h1>
+                            <h1 className="font-bold">ĐỀ TÀI NGHIÊN CỨU</h1>
                         </div>
                     </div>
                 </div>

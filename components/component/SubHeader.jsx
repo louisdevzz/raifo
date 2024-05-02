@@ -23,11 +23,11 @@ export default function SubHeader(){
                 },
                 {
                     name:"Bài báo hội thảo",
-                    url:"#"
+                    url:"/congtrinhnghiencuu/baibaohoithao"
                 },
                 {
                     name:"Đề tài nghiên cứu",
-                    url:"#"
+                    url:"/congtrinhnghiencuu/detainghiencuu"
                 }
             ]
         },
@@ -36,11 +36,11 @@ export default function SubHeader(){
             children:[
                 {
                     name:"Seminar",
-                    url:"#"
+                    url:"/hoatdongkhoahoc/seminar"
                 },
                 {
                     name:"Tin tức - sự kiện",
-                    url:"#"
+                    url:"/hoatdongkhoahoc/tintucsukien"
                 }
             ]
         }
@@ -48,30 +48,30 @@ export default function SubHeader(){
     const InalCooperation = [
         {
             title:"Chương trình hợp tác quốc tế",
-            url:"#"
+            url:"/hoptacquocte"
         },
         {
             title:"Mạng lưới hợp tác",
-            url:"#"
+            url:"/hoptacquocte/mangluoihoptac"
         },
         {
             title:"Dự án quốc tế",
-            url:"#"
+            url:"/hoptacquocte/duanquocte"
         },
         {
             title:"Trao đổi sinh viên",
             children:[
                 {
                     name:"Điều kiện",
-                    url:"#"
+                    url:"/hoptacquocte/traodoisinhvien/dieukien"
                 },
                 {
                     name:"Các trường đối tác",
-                    url:"#"
+                    url:"/hoptacquocte/traodoisinhvien/doitac"
                 },
                 {
                     name:"Sinh viên quốc tế",
-                    url:"#"
+                    url:"/hoptacquocte/traodoisinhvien/sinhvienquocte"
                 }
             ]
         }
