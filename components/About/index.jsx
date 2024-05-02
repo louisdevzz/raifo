@@ -29,13 +29,9 @@ export default function About(){
                                         <p>Trưởng phòng: &nbsp;</p>
                                         <em>TS.Nguyễn Thanh Điền</em>
                                     </div>
-                                    <div className="text-sm flex flex-row">
+                                    <div className="text-sm mt-2 flex flex-row">
                                         <p>Email: &nbsp;</p>
                                         <em>dien.nguyenthanh@ttu.edu.vn</em>
-                                    </div>
-                                    <div className="text-sm flex flex-row">
-                                        <p>Số điện thoại: &nbsp;</p>
-                                        <em>0000000000000</em>
                                     </div>
                                 </div>
                                 <div className="border border-gray-300">
@@ -45,16 +41,12 @@ export default function About(){
                             <div className="mt-3 md:mt-5 flex md:flex-row flex-col-reverse justify-between items-start md:items-center">
                                 <div className="mt-3 md:mt-0">
                                     <div className="text-sm flex flex-row">
-                                        <p>Chuyên viên: &nbsp;</p>
+                                        <p>Chuyên viên quản lý khoa học: &nbsp;</p>
                                         <em>Ths.Phạm Thị Bảo Trân</em>
                                     </div>
-                                    <div className="text-sm flex flex-row">
+                                    <div className="text-sm mt-2 flex flex-row">
                                         <p>Email: &nbsp;</p>
                                         <em>tran.pham@ttu.edu.vn</em>
-                                    </div>
-                                    <div className="text-sm flex flex-row">
-                                        <p>Số điện thoại: &nbsp;</p>
-                                        <em>0000000000000</em>
                                     </div>
                                 </div>
                                 <div className="border border-gray-300">
@@ -64,39 +56,31 @@ export default function About(){
                             <div className="mt-3 md:mt-5 flex md:flex-row flex-col-reverse justify-between items-start md:items-center">
                                 <div className="mt-3 md:mt-0">
                                     <div className="text-sm flex flex-row">
-                                        <p>Chuyên viên: &nbsp;</p>
-                                        <em>CN.Nguyễn Thị Kim Châu</em>
+                                        <p>Chuyên viên quản lý khoa học: &nbsp;</p>
+                                        <em>Ths.Nguyễn Bích Ngọc Hương</em>
                                     </div>
-                                    <div className="text-sm flex flex-row">
+                                    <div className="text-sm mt-2 flex flex-row">
                                         <p>Email: &nbsp;</p>
-                                        <em>chau.nguyen@ttu.edu.vn</em>
-                                    </div>
-                                    <div className="text-sm flex flex-row">
-                                        <p>Số điện thoại: &nbsp;</p>
-                                        <em>0000000000000</em>
+                                        <em>huong.nguyen@ttu.edu.vn</em>
                                     </div>
                                 </div>
                                 <div className="border border-gray-300">
-                                    <img src="https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1713484800&semt=ais" className="w-[153px] h-[110px]"/>
+                                    <img src="images/profile/nguyenbichngochuongcropbg.png" className="w-[153px] h-[110px]"/>
                                 </div>
                             </div>
                             <div className="mt-3 md:mt-5 flex md:flex-row flex-col-reverse justify-between items-start md:items-center">
                                 <div className="mt-3 md:mt-0">
                                     <div className="text-sm flex flex-row">
-                                        <p>Chuyên viên: &nbsp;</p>
-                                        <em>Ths.Nguyễn Bích Ngọc Hương</em>
+                                        <p>Chuyên viên quản lý quốc tế: &nbsp;</p>
+                                        <em>CN.Nguyễn Thị Kim Châu</em>
                                     </div>
-                                    <div className="text-sm flex flex-row">
+                                    <div className="text-sm mt-2 flex flex-row">
                                         <p>Email: &nbsp;</p>
-                                        <em>huong.nguyen@ttu.edu.vn</em>
-                                    </div>
-                                    <div className="text-sm flex flex-row">
-                                        <p>Số điện thoại: &nbsp;</p>
-                                        <em>0000000000000</em>
+                                        <em>chau.nguyen@ttu.edu.vn</em>
                                     </div>
                                 </div>
                                 <div className="border border-gray-300">
-                                    <img src="https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1713484800&semt=ais" className="w-[153px] h-[110px]"/>
+                                    <img src="https://ttu.edu.vn/wp-content/uploads/2022/03/Nguyen-Thi-Kim-Chau-218x150.png" className="w-[153px] h-[110px]"/>
                                 </div>
                             </div>
                         </div>

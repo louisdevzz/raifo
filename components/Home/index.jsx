@@ -14,7 +14,7 @@ export default function Home(){
             <Header open={open} setOpen={setOpen} setIsShow={setIsShow} isShow={isShow}/>
             <div className="container max-w-screen-3xl mx-auto flex flex-col justify-center items-center px-3 md:px-[75px]">
                 <div className="md:mt-12 mt-2">
-                    <img src="https://tjbs.ttuscience.org/public/journals/2/homepageImage_en_US.jpg"/>
+                    <img src="images/background/background_home.jpg" className=""/>
                 </div>
                 <div className="mt-5">
                     <p>The TTU Journal of Biomedical Sciences (TJBS) is a new peer-reviewed journal covering all areas of Biomedical Research published by Tan Tao University. The TJBS aims to launch the first issue in October 2022. We expect you could make an excellent contribution based on your expertise and recent achievements in the following areas: clinical science, dental, nursing, other related medical fields, and biotechnology.</p>
@@ -28,7 +28,7 @@ export default function Home(){
                                 </div>
                             </div>
                             <div className="flex items-center flex-col mt-5">
-                                <a href="#" className="flex items-center flex-col">
+                                <a target="_blank" href="https://ttu.edu.vn/nang-cao-nhan-thuc-ve-tam-quan-trong-cua-cac-ky-nang-the-ky-21-cho-sinh-vien-4cs/" className="flex items-center flex-col">
                                     <img src="https://ttu.edu.vn/wp-content/uploads/2024/04/Thmbnail-324x235.jpg" className="w-full"/>
                                     <div className="text-xl text-wrap mt-2">
                                         <h3>{formatString("Nâng cao nhận thức về tầm quan trọng của các kỹ năng Thế kỷ 21 cho sinh viên: 4C’s")}</h3>
@@ -86,14 +86,6 @@ function formatString(str){
 function formatStringDescription(str){
     if(str.length > 159){
         return str.slice(0,159)+"..."
-    }else{
-        return str;
-    }
-}
-
-function format(str){
-    if(str.length > 300){
-        return str.slice(0,300)+"..."
     }else{
         return str;
     }
