@@ -19,7 +19,7 @@ export default function SubHeader(){
             children:[
                 {
                     name:"Bài báo khoa học",
-                    url:"#"
+                    url:"/congtrinhnghiencuu/baibaokhoahoc"
                 },
                 {
                     name:"Bài báo hội thảo",
@@ -83,7 +83,7 @@ export default function SubHeader(){
             </a>
             <ul className='flex flex-row justify-between gap-10'>
                 <li>
-                    <a href='/about'>
+                    <a href='/thongtinchung'>
                         <div className='py-2 cursor-pointer'>Thông tin chung</div>
                     </a>
                 </li>

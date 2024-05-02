@@ -1,5 +1,4 @@
 import { Roboto } from "next/font/google";
-import Footer from "../Footer";
 const roboto = Roboto({ subsets: ["latin"],weight:"700" });
 
 const Title = roboto.className;
@@ -7,7 +6,6 @@ const Title = roboto.className;
 export default function About(){
     return(
         <div>
-            <div className="container max-w-screen-3xl mx-auto md:mt-12 md:px-[75px] px-3 mt-5">
             {/* left */}
             <div className="w-full">    
                 <div className="border border-gray-200">
@@ -88,8 +86,6 @@ export default function About(){
                     </div>
                 </div>
             </div>
-        </div>
-        <Footer/>
         </div>
     )
 }
