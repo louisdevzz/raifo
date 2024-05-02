@@ -1,5 +1,4 @@
 const isLogin = async(user,pass) => {
-    let isLogin = false;
     const userObj = {
         user:user,
         pass:pass
@@ -14,11 +13,10 @@ const isLogin = async(user,pass) => {
     });
     const result = await data.json();
     if(result.length>0){
-        isLogin=true
+        return [true,result];
     }else{
-        console.log("failed")
+        return false;
     }
-    return isLogin;
 };
 
 const createUser = async(user,pass,fullname,email) => {

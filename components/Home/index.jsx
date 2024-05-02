@@ -1,4 +1,6 @@
 'use client'
+
+
 export default function Home(){
     function formatString(str){
         if(str.length > 63){

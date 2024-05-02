@@ -7,11 +7,11 @@ export default function HeaderMobile({setOpen,setIsShow}){
     return(
         <div
             role="dialog"
-            class="z-50 absolute overflow-auto overscroll-auto gap-4 bg-white py-6 pb-20 px-3 shadow-lg inset-y-0 right-0 h-screen border-l ease-in-out duration-500 transition sm:max-w-sm w-[100%] sm:max-lg:max-w-[75%] md:max-w-[50%]"
+            className="z-50 absolute overflow-auto overscroll-auto gap-4 bg-white py-6 pb-20 px-3 shadow-lg inset-y-0 right-0 h-screen border-l ease-in-out duration-500 transition sm:max-w-sm w-[100%] sm:max-lg:max-w-[75%] md:max-w-[50%]"
             tabindex="-1"
             style={{ pointerEvents: "auto", width: "100%" }}
             >
-                <div class="flex flex-col sm:text-left">
+                <div className="flex flex-col sm:text-left">
                     <div>
                         <a href='/' className='bg-[#164b8e] w-[40px] p-2 flex justify-center items-center'>
                             <CIcon icon={cilHome} style={{width:"30px",color:"#ffffff"}}/>
@@ -19,7 +19,7 @@ export default function HeaderMobile({setOpen,setIsShow}){
                         <button
                             onClick={()=>setOpen(false)}
                             type="button"
-                            class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+                            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
                         >
                             <img src="/images/close.svg/" width={40}/>
                         </button>

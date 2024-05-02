@@ -122,7 +122,7 @@ const DropDownMenu = ({title,children}) =>{
                             )
                         }else{
                             return(
-                                <DropDownMenuChildren title={dt.title} children={dt.children}/>
+                                <DropDownMenuChildren key={index} title={dt.title} children={dt.children}/>
                             )
                         }
                     })}
