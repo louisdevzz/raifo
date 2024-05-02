@@ -61,7 +61,7 @@ export default function Home(){
                                 <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
                             </div>
                             <div className="mt-4 border-t-2 border-[#2a5389] text-right">
-                                <a href="#">
+                                <a href="/congtrinhnghiencuu/baibaokhoahoc">
                                     <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
                                 </a>
                             </div>
@@ -89,7 +89,7 @@ export default function Home(){
                                 <p>{formatString("Tổng hợp nano bạc bằng phương pháp sinh học sử dụng dịch chiết của thực vật và khảo sát hoạt tính kháng khuẩn của hạt nano.")}</p>
                             </div>
                             <div className="mt-2 border-t-2 border-[#2a5389] text-right">
-                                <a href="#">
+                                <a href="/congtrinhnghiencuu/detainghiencuu">
                                     <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
                                 </a>
                             </div>
