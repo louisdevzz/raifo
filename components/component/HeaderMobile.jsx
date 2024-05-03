@@ -37,7 +37,7 @@ export default function HeaderMobile({setOpen,setIsShow}){
                     <div className="mt-10 flex flex-col justify-start">
                         <div className="px-1 py-2 text-xl border-b border-[#183762] font-semibold text-[#183762]">
                             <div>
-                                <a href="/about">Thông tin chung</a>
+                                <a href="/thongtinchung">Thông tin chung</a>
                             </div>
                         </div>
                         <DropDownMenu title={"Tạp chí khoa học"}>
@@ -52,47 +52,47 @@ export default function HeaderMobile({setOpen,setIsShow}){
                             <p className='text-lg py-1'>
                                 <DropDownMenu title={"Công trình nghiên cứu"} options={true}>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Bài báo khoa học</a>
+                                        <a href="/congtrinhnghiencuu/baibaokhoahoc">Bài báo khoa học</a>
                                     </p>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Bài báo hội thảo</a>
+                                        <a href="/congtrinhnghiencuu/baibaohoithao">Bài báo hội thảo</a>
                                     </p>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Đề tài nghiên cứu</a>
+                                        <a href="/congtrinhnghiencuu/detainghiencuu">Đề tài nghiên cứu</a>
                                     </p>
                                 </DropDownMenu>
                             </p>
                             <p className='text-lg py-1'>
                                 <DropDownMenu title={"Hoạt động khoa học"} options={true}>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Seminar</a>
+                                        <a href="/hoatdongkhoahoc/seminar">Seminar</a>
                                     </p>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Tin tức - Sự kiện</a>
+                                        <a href="/hoatdongkhoahoc/tintucsukien">Tin tức - Sự kiện</a>
                                     </p>
                                 </DropDownMenu>
                             </p>
                         </DropDownMenu>
                         <DropDownMenu title={"Hợp tác quốc tế"}>
                             <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="#">Chương trình hợp tác quốc tế</a>
+                                <a href="/hoptacquocte/cthoptacquocte">Chương trình hợp tác quốc tế</a>
                             </p>
                             <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="#">Mạng lưới hợp tác</a>
+                                <a href="/hoptacquocte/mangluoihoptac">Mạng lưới hợp tác</a>
                             </p>
                             <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="#">Dự án quốc tế</a>
+                                <a href="/hoptacquocte/duanquocte">Dự án quốc tế</a>
                             </p>
                             <p className='text-lg'>
                                 <DropDownMenu title={"Trao đổi sinh viên"} options={true}>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Điều kiện</a>
+                                        <a href="/hoptacquocte/traodoisinhvien/dieukien">Điều kiện</a>
                                     </p>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Các trường đối tác</a>
+                                        <a href="/hoptacquocte/traodoisinhvien/doitac">Các trường đối tác</a>
                                     </p>
                                     <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="#">Sinh viên quốc tế</a>
+                                        <a href="/hoptacquocte/traodoisinhvien/sinhvienquocte">Sinh viên quốc tế</a>
                                     </p>
                                 </DropDownMenu>
                             </p>

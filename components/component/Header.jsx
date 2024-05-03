@@ -17,10 +17,7 @@ export default function Header({open,setOpen,isShow,setIsShow}){
             setFullname(localStorage.getItem("fullname"))
         }
     },[])
-    const Logout = ()=>{
-        localStorage.removeItem("fullname");
-        location.replace(location.href);
-    }
+    
     return(
         <div>
             <div className="bg-gradient-to-r from-white to-[#2878cf]">
@@ -33,25 +30,7 @@ export default function Header({open,setOpen,isShow,setIsShow}){
                             <div className={`${roboto.className} drop-shadow-md`}>PHÒNG QUẢN LÝ KHOA HỌC VÀ HỢP TÁC QUỐC TẾ</div>
                             <div className={`${roboto.className} drop-shadow-md`}>RESEARCH ADMINISTRATION AND INTERNATIONAL RELATION OFFICE</div>
                         </div>
-                        {fullname?
-                            <div className="ml-12 mr-10 group relative">
-                                <div className="flex flex-row items-center gap-3">
-                                    <div className="bg-[#183762] p-1 w-10 rounded-full">
-                                        <img src="/images/avatar.svg" width={35}/>
-                                    </div>
-                                </div>
-                                <div className="absolute invisible group-hover:visible mt-2 p-3 bg-[#f6f5f4] rounded-lg w-[200px] h-[200px] right-[10px]">
-                                    <div className="flex justify-center flex-col items-center gap-5 mt-4">
-                                        <div>
-                                            <p className="text-lg font-semibold">{fullname}</p>
-                                        </div>
-                                        <div className="mt-5 w-full">
-                                            <button onClick={Logout} className="font-semibold bg-white hover:bg-[#efefef] px-3 py-2 w-full">Đăng xuất</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            :<div className="md:ml-[80px] ml-12 flex flex-row gap-5 items-center justify-center">
+                        <div className="md:ml-[80px] ml-12 flex flex-row gap-5 items-center justify-center">
                                 <div className="relative flex items-center w-full h-8 rounded-2xl focus-within:shadow-lg bg-white overflow-hidden">
                                     <div className="grid place-items-center h-full w-12 text-gray-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -70,11 +49,11 @@ export default function Header({open,setOpen,isShow,setIsShow}){
                                         <img src="/images/menu.svg" width={45} className="text-[#183762]"/>
                                     </button>
                                 </div>
-                                <div className="w-full hidden mt-2 md:flex items-center justify-center">
+                                {fullname?"":<div className="w-full hidden mt-2 md:flex items-center justify-center">
                                     <button type="button" onClick={()=>setIsShow(!isShow)} className="text-white  bg-[#1a5fb4] hover:bg-[#164b8e] focus:outline-none focus:ring-4 focus:ring-blue-300 font-bold rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Đăng nhập / Đăng ký</button>
-                                </div>
+                                </div>}
                             </div>
-                        }
+                        
                     </div>
                 </div>
             </div>

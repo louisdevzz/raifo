@@ -1,4 +1,4 @@
-import BaiBaoKhoaHoc from "../../../components/CongTrinhNguyenCuu/BaiBaoKhoaHoc"
+import BaiBaoKhoaHoc from "../../../components/CongTrinhNghienCuu/BaiBaoKhoaHoc"
 
 export default function BaiBaoKhoaHocHome(){
     return(

@@ -25,8 +25,8 @@ export default function Home(){
             <div className="mt-5">
                 <p>The TTU Journal of Biomedical Sciences (TJBS) is a new peer-reviewed journal covering all areas of Biomedical Research published by Tan Tao University. The TJBS aims to launch the first issue in October 2022. We expect you could make an excellent contribution based on your expertise and recent achievements in the following areas: clinical science, dental, nursing, other related medical fields, and biotechnology.</p>
             </div>
-            <div className="grid md:grid-cols-4 grid-cols-1 gap-10 mt-10">
-                <div className="mt-2 md:mt-0 h-[500px] col-span-1">
+            <div className="grid md:grid-cols-4 grid-cols-1 md:gap-10 mt-10">
+                <div className="mt-2 md:mt-0 w-full h-[500px] md:col-span-1">
                     <div className="flex items-center flex-col">
                         <div className="border border-gray-200 w-full">
                             <div className="text-center border-t-2 border-[#183762] py-3">
@@ -46,8 +46,8 @@ export default function Home(){
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-end mt-2 md:mt-0 col-span-2">
-                    <div className="w-full h-[500px]">
+                <div className="flex justify-end mt-5 md:mt-0 md:col-span-2">
+                    <div className="w-full h-full md:h-[500px]">
                         <div className="border border-gray-200">
                             <div className="text-center border-t-2 border-[#183762] py-3">
                                 <h1 className="font-bold">BÀI BÁO KHOA HỌC</h1>
@@ -70,8 +70,8 @@ export default function Home(){
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-end mt-2 md:mt-0 col-span-1">
-                    <div className="w-full h-[500px]">
+                <div className="flex justify-end mt-12 md:mt-0 md:col-span-1">
+                    <div className="w-full h-full md:h-[500px]">
                         <div className="border border-gray-200">
                             <div className="text-center border-t-2 border-[#183762] py-3">
                                 <h1 className="font-bold">ĐỀ TÀI NGHIÊN CỨU</h1>

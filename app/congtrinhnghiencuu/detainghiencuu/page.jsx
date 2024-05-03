@@ -1,4 +1,4 @@
-import DeTaiNghienCuu from "../../../components/CongTrinhNguyenCuu/DeTaiNghienCuu"
+import DeTaiNghienCuu from "../../../components/CongTrinhNghienCuu/DeTaiNghienCuu"
 export default function DeTaiNghienCuuHome(){
     return(
         <DeTaiNghienCuu/>

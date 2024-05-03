@@ -15,7 +15,7 @@ export default function BaiBaoKhoaHoc(){
         }
     }
     return(
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
                 <div className="flex justify-start items-start">
                     <div className="border border-gray-200 w-full">
@@ -42,7 +42,7 @@ export default function BaiBaoKhoaHoc(){
                     </div>
                 </div>
             </div>
-            <div className="col-span-1 w-[80%] flex flex-col gap-20">
+            <div className="col-span-1 mt-12 md:mt-0 md:w-[80%] flex flex-col gap-20">
                 <div>
                     <div className="flex justify-start items-start">
                         <div className="border border-gray-200 w-full">
