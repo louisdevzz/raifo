@@ -1,5 +1,6 @@
 "use client"
 import { Roboto } from "next/font/google";
+import { url } from "../../utils/config";
 const roboto = Roboto({ subsets: ["latin"],weight:"700" });
 
 const Title = roboto.className;
@@ -13,7 +14,7 @@ export default function Footer(){
                         <div className="flex flex-col">
                             <h1 className={`${Title} text-xl py-2 border-b border-[#6a6764] w-full md:w-[250px]`}>Thông Tin</h1>
                             <div className="mt-5">
-                                <a href="/thongtinchung">Thông Tin Chung</a>
+                                <a href={url.thongtinchung}>Thông Tin Chung</a>
                             </div>
                         </div>
                         <div className="flex flex-col">
@@ -21,10 +22,10 @@ export default function Footer(){
                             <div className="mt-5">
                                 <ul>
                                     <li>
-                                        <a href="https://review.ttu.edu.vn/index.php/review/index">TTU Review</a>
+                                        <a href={url.tapchikhoahoc.ttuReview}>TTU Review</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="https://tjbs.ttuscience.org/index.php/tjbs">TJBS</a>
+                                        <a href={url.tapchikhoahoc.tjbs}>TJBS</a>
                                     </li>
                                 </ul>
                             </div>
@@ -34,13 +35,13 @@ export default function Footer(){
                             <div className="mt-5">
                                 <ul>
                                     <li>
-                                        <a href="/congtrinhnghiencuu/baibaokhoahoc">Bài báo khoa học</a>
+                                        <a href={url.quanlykhoahoc.congtrinhnghiencuu.baibaokhoahoc}>Bài báo khoa học</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/congtrinhnghiencuu/baibaohoithao">Bài báo hội thảo</a>
+                                        <a href={url.quanlykhoahoc.congtrinhnghiencuu.baibaohoithao}>Bài báo hội thảo</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/congtrinhnghiencuu/detainghiencuu">Đề tài nghiên cứu</a>
+                                        <a href={url.quanlykhoahoc.congtrinhnghiencuu.detainghiencuu}>Đề tài nghiên cứu</a>
                                     </li>
                                 </ul>
                             </div>
@@ -50,10 +51,10 @@ export default function Footer(){
                             <div className="mt-5">
                                 <ul>
                                     <li>
-                                        <a href="/hoatdongkhoahoc/seminar">Seminar</a>
+                                        <a href={url.quanlykhoahoc.hoatdongkhoahoc.seminar}>Seminar</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/hoatdongkhoahoc/tintucsukien">Tin tức - Sự kiện</a>
+                                        <a href={url.quanlykhoahoc.hoatdongkhoahoc.tintucsukien}>Tin tức - Sự kiện</a>
                                     </li>
                                 </ul>
                             </div>
@@ -63,22 +64,22 @@ export default function Footer(){
                             <div className="mt-5">
                                 <ul>
                                     <li>
-                                        <a href="/hoptacquocte/cthoptacquocte">Chương trình hợp tác quốc tế</a>
+                                        <a href={url.hoptacquocte.cthoptacquocte}>Chương trình hợp tác quốc tế</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/hoptacquocte/mangluoihoptac">Mạng lưới hợp tác</a>
+                                        <a href={url.hoptacquocte.mangluoihoptac}>Mạng lưới hợp tác</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/hoptacquocte/duanquocte">Dự án quốc tế</a>
+                                        <a href={url.hoptacquocte.duanquocte}>Dự án quốc tế</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/hoptacquocte/traodoisinhvien/dieukien">Điều kiện</a>
+                                        <a href={url.hoptacquocte.traodoisinhvien.dieukien}>Điều kiện</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/hoptacquocte/traodoisinhvien/doitac">Các trường đối tác</a>
+                                        <a href={url.hoptacquocte.traodoisinhvien.doitac}>Các trường đối tác</a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href="/hoptacquocte/traodoisinhvien/sinhvienquocte">Sinh viên quôc tế</a>
+                                        <a href={url.hoptacquocte.traodoisinhvien.sinhvienquocte}>Sinh viên quôc tế</a>
                                     </li>
                                 </ul>
                             </div>

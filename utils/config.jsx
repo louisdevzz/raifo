@@ -1,6 +1,28 @@
 export const url = {
     thongtinchung:"/thongtinchung",
     tapchikhoahoc:{
-
+        ttuReview:"https://review.ttu.edu.vn/index.php/review/index",
+        tjbs:"https://tjbs.ttuscience.org/index.php/tjbs"
+    },
+    quanlykhoahoc:{
+        congtrinhnghiencuu:{
+            baibaokhoahoc:"/congtrinhnghiencuu/baibaokhoahoc",
+            baibaohoithao:"/congtrinhnghiencuu/baibaohoithao",
+            detainghiencuu:"/congtrinhnghiencuu/detainghiencuu"
+        },
+        hoatdongkhoahoc:{
+            seminar:"/hoatdongkhoahoc/seminar",
+            tintucsukien:"/hoatdongkhoahoc/tintucsukien"
+        }
+    },
+    hoptacquocte:{
+        cthoptacquocte:"/hoptacquocte/cthoptacquocte",
+        mangluoihoptac:"/hoptacquocte/mangluoihoptac",
+        duanquocte:"/hoptacquocte/duanquocte",
+        traodoisinhvien:{
+            dieukien:"/hoptacquocte/traodoisinhvien/dieukien",
+            doitac:"/hoptacquocte/traodoisinhvien/doitac",
+            sinhvienquocte:"/hoptacquocte/traodoisinhvien/sinhvienquocte"
+        }
     }
 }

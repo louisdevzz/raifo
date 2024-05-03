@@ -2,6 +2,7 @@
 import CIcon from '@coreui/icons-react';
 import { cilHome } from '@coreui/icons';
 import { useState,useEffect } from 'react';
+import { url } from '../../utils/config';
 
 export default function SubHeader(){
     const [fullname, setFullname] = useState('');
@@ -17,11 +18,11 @@ export default function SubHeader(){
     const NewsPaper = [
         {
             title:"TTU Review",
-            url:"https://review.ttu.edu.vn/index.php/review/index"
+            url: url.tapchikhoahoc.ttuReview
         },
         {
             title:"TJBS",
-            url:"https://tjbs.ttuscience.org/index.php/tjbs"
+            url: url.tapchikhoahoc.tjbs
         }
     ];
     const SManagement = [
@@ -30,15 +31,15 @@ export default function SubHeader(){
             children:[
                 {
                     name:"Bài báo khoa học",
-                    url:"/congtrinhnghiencuu/baibaokhoahoc"
+                    url: url.quanlykhoahoc.congtrinhnghiencuu.baibaokhoahoc
                 },
                 {
                     name:"Bài báo hội thảo",
-                    url:"/congtrinhnghiencuu/baibaohoithao"
+                    url: url.quanlykhoahoc.congtrinhnghiencuu.baibaohoithao
                 },
                 {
                     name:"Đề tài nghiên cứu",
-                    url:"/congtrinhnghiencuu/detainghiencuu"
+                    url: url.quanlykhoahoc.congtrinhnghiencuu.detainghiencuu
                 }
             ]
         },
@@ -47,11 +48,11 @@ export default function SubHeader(){
             children:[
                 {
                     name:"Seminar",
-                    url:"/hoatdongkhoahoc/seminar"
+                    url:url.quanlykhoahoc.hoatdongkhoahoc.seminar
                 },
                 {
                     name:"Tin tức - sự kiện",
-                    url:"/hoatdongkhoahoc/tintucsukien"
+                    url:url.quanlykhoahoc.hoatdongkhoahoc.tintucsukien
                 }
             ]
         }
@@ -59,30 +60,30 @@ export default function SubHeader(){
     const InalCooperation = [
         {
             title:"Chương trình hợp tác quốc tế",
-            url:"/hoptacquocte"
+            url: url.hoptacquocte.cthoptacquocte
         },
         {
             title:"Mạng lưới hợp tác",
-            url:"/hoptacquocte/mangluoihoptac"
+            url: url.hoptacquocte.mangluoihoptac
         },
         {
             title:"Dự án quốc tế",
-            url:"/hoptacquocte/duanquocte"
+            url: url.hoptacquocte.duanquocte
         },
         {
             title:"Trao đổi sinh viên",
             children:[
                 {
                     name:"Điều kiện",
-                    url:"/hoptacquocte/traodoisinhvien/dieukien"
+                    url: url.hoptacquocte.traodoisinhvien.dieukien
                 },
                 {
                     name:"Các trường đối tác",
-                    url:"/hoptacquocte/traodoisinhvien/doitac"
+                    url: url.hoptacquocte.traodoisinhvien.doitac
                 },
                 {
                     name:"Sinh viên quốc tế",
-                    url:"/hoptacquocte/traodoisinhvien/sinhvienquocte"
+                    url: url.hoptacquocte.traodoisinhvien.sinhvienquocte
                 }
             ]
         }

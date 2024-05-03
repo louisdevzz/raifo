@@ -2,13 +2,14 @@
 import CIcon from '@coreui/icons-react';
 import { cilHome } from '@coreui/icons';
 import { useState } from 'react';
+import { url } from '../../utils/config';
 
 export default function HeaderMobile({setOpen,setIsShow}){
     return(
         <div
             role="dialog"
             className="z-50 absolute overflow-auto overscroll-auto gap-4 bg-white py-6 pb-20 px-3 shadow-lg inset-y-0 right-0 h-screen border-l ease-in-out duration-500 transition sm:max-w-sm w-[100%] sm:max-lg:max-w-[75%] md:max-w-[50%]"
-            tabindex="-1"
+            tabIndex="-1"
             style={{ pointerEvents: "auto", width: "100%" }}
             >
                 <div className="flex flex-col sm:text-left">
@@ -36,64 +37,62 @@ export default function HeaderMobile({setOpen,setIsShow}){
                     </div>
                     <div className="mt-10 flex flex-col justify-start">
                         <div className="px-1 py-2 text-xl border-b border-[#183762] font-semibold text-[#183762]">
-                            <div>
-                                <a href="/thongtinchung">Thông tin chung</a>
-                            </div>
+                            <a href={url.thongtinchung}>Thông tin chung</a>
                         </div>
                         <DropDownMenu title={"Tạp chí khoa học"}>
-                            <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="https://review.ttu.edu.vn/index.php/review/index">TTU Review</a>
-                            </p>
-                            <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="https://tjbs.ttuscience.org/index.php/tjbs">TJBS</a>
-                            </p>
+                            <li className='text-lg border-b border-[#867770] py-1'>
+                                <a href={url.tapchikhoahoc.ttuReview}>TTU Review</a>
+                            </li>
+                            <li className='text-lg border-b border-[#867770] py-1'>
+                                <a href={url.tapchikhoahoc.tjbs}>TJBS</a>
+                            </li>
                         </DropDownMenu>
                         <DropDownMenu title={"Quản lý khoa học"}>
                             <p className='text-lg py-1'>
                                 <DropDownMenu title={"Công trình nghiên cứu"} options={true}>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/congtrinhnghiencuu/baibaokhoahoc">Bài báo khoa học</a>
-                                    </p>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/congtrinhnghiencuu/baibaohoithao">Bài báo hội thảo</a>
-                                    </p>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/congtrinhnghiencuu/detainghiencuu">Đề tài nghiên cứu</a>
-                                    </p>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.quanlykhoahoc.congtrinhnghiencuu.baibaokhoahoc}>Bài báo khoa học</a>
+                                    </li>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.quanlykhoahoc.congtrinhnghiencuu.baibaohoithao}>Bài báo hội thảo</a>
+                                    </li>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.quanlykhoahoc.congtrinhnghiencuu.detainghiencuu}>Đề tài nghiên cứu</a>
+                                    </li>
                                 </DropDownMenu>
                             </p>
                             <p className='text-lg py-1'>
                                 <DropDownMenu title={"Hoạt động khoa học"} options={true}>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/hoatdongkhoahoc/seminar">Seminar</a>
-                                    </p>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/hoatdongkhoahoc/tintucsukien">Tin tức - Sự kiện</a>
-                                    </p>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.quanlykhoahoc.hoatdongkhoahoc.seminar}>Seminar</a>
+                                    </li>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.quanlykhoahoc.hoatdongkhoahoc.tintucsukien}>Tin tức - Sự kiện</a>
+                                    </li>
                                 </DropDownMenu>
                             </p>
                         </DropDownMenu>
                         <DropDownMenu title={"Hợp tác quốc tế"}>
-                            <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="/hoptacquocte/cthoptacquocte">Chương trình hợp tác quốc tế</a>
-                            </p>
-                            <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="/hoptacquocte/mangluoihoptac">Mạng lưới hợp tác</a>
-                            </p>
-                            <p className='text-lg border-b border-[#867770] py-1'>
-                                <a href="/hoptacquocte/duanquocte">Dự án quốc tế</a>
-                            </p>
+                            <li className='text-lg border-b border-[#867770] py-1'>
+                                <a href={url.hoptacquocte.cthoptacquocte}>Chương trình hợp tác quốc tế</a>
+                            </li>
+                            <li className='text-lg border-b border-[#867770] py-1'>
+                                <a href={url.hoptacquocte.mangluoihoptac}>Mạng lưới hợp tác</a>
+                            </li>
+                            <li className='text-lg border-b border-[#867770] py-1'>
+                                <a href={url.hoptacquocte.duanquocte}>Dự án quốc tế</a>
+                            </li>
                             <p className='text-lg'>
                                 <DropDownMenu title={"Trao đổi sinh viên"} options={true}>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/hoptacquocte/traodoisinhvien/dieukien">Điều kiện</a>
-                                    </p>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/hoptacquocte/traodoisinhvien/doitac">Các trường đối tác</a>
-                                    </p>
-                                    <p className='text-lg border-b border-[#867770] py-1'>
-                                        <a href="/hoptacquocte/traodoisinhvien/sinhvienquocte">Sinh viên quốc tế</a>
-                                    </p>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.hoptacquocte.traodoisinhvien.dieukien}>Điều kiện</a>
+                                    </li>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.hoptacquocte.traodoisinhvien.doitac}>Các trường đối tác</a>
+                                    </li>
+                                    <li className='text-lg border-b border-[#867770] py-1'>
+                                        <a href={url.hoptacquocte.traodoisinhvien.sinhvienquocte}>Sinh viên quốc tế</a>
+                                    </li>
                                 </DropDownMenu>
                             </p>
                         </DropDownMenu>
@@ -112,9 +111,9 @@ const DropDownMenu = ({children,title,options}) => {
                 {open?<img src="/images/arrow-up.svg" width={options?18:22} className='mr-2'/>:<img src="/images/arrow-down.svg" width={options?12:15} className='mr-2'/>}
             </button>
             {open&&<div className='px-1 py-1 bg-[#f6f5f4]'>
-            <div className='ml-10'>
+            <ul className='ml-10'>
                 {children}
-            </div>
+            </ul>
         </div>}
         </div>
     )
