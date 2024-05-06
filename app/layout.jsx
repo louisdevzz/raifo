@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   const [isShow,setIsShow] = useState(false);
 
   const isOpen = isShow?isShow:open;
-  console.log(isOpen)
+
   return (
     <html lang="en">
       <head>
