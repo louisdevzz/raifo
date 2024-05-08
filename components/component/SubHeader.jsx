@@ -148,7 +148,7 @@ const DropDownMenu = ({title,children}) =>{
                     {children.map((dt,index)=>{
                         if(dt.url){
                             return(
-                                <li key={index} className='hover:bg-[#183762] hover:text-white px-3 py-2'><a href={dt.url}>{dt.title}</a></li>
+                                <li key={index} className='hover:bg-[#183762] hover:text-white px-3 py-2'><a target='_blank' href={dt.url}>{dt.title}</a></li>
                             )
                         }else{
                             return(

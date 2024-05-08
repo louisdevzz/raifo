@@ -1,5 +1,5 @@
 export default function SeminarCP(){
-    function formatString(str){
+    const formatString = (str) => {
         if(str.length > 63){
             return str.slice(0,63)+"..."
         }else{
@@ -7,7 +7,7 @@ export default function SeminarCP(){
         }
     }
     
-    function formatStringDescription(str){
+    const formatStringDescription = (str) =>{
         if(str.length > 159){
             return str.slice(0,159)+"..."
         }else{
@@ -24,7 +24,6 @@ export default function SeminarCP(){
                         </div>
                     </div>
                 </div>
-                
             </div>
             <div className="col-span-1 mt-12 md:mt-0 md:w-[80%] flex flex-col gap-20">
                 <div>

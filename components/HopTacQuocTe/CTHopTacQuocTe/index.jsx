@@ -1,5 +1,5 @@
 export default function CTHopTacQuocTeCP(){
-    function formatString(str){
+    const formatString = (str) => {
         if(str.length > 63){
             return str.slice(0,63)+"..."
         }else{
@@ -7,7 +7,7 @@ export default function CTHopTacQuocTeCP(){
         }
     }
     
-    function formatStringDescription(str){
+    const formatStringDescription = (str) => {
         if(str.length > 159){
             return str.slice(0,159)+"..."
         }else{
