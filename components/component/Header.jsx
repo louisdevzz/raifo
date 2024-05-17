@@ -21,16 +21,16 @@ export default function Header({open,setOpen,isShow,setIsShow}){
     return(
         <div>
             <div className="bg-gradient-to-r from-white to-[#2878cf]">
-                <div className="container max-w-screen-2xl mx-auto  md:px-20 px-4">
+                <div className="xl:max-w-screen-2xl lg:max-w-screen-xl max-w-screen-lg mx-auto md:px-5 lg:px-10 xl:px-20 px-4">
                     <div className="flex flex-row py-5 justify-between items-center">
                         <a href="/">
                             <img src="/images/logo_ttu.png" className="md:w-[120px] md:ml-2 w-[80px]"/>
                         </a>
-                        <div className="md:ml-[60px] hidden md:block text-[#183762] text-center text-xl font-semibold">
+                        <div className="xl:px-[40px] lg:px-[25px] hidden md:block text-[#183762] text-center lg:text-lg xl:text-xl font-semibold">
                             <div className={`${roboto.className} drop-shadow-md`}>PHÒNG QUẢN LÝ KHOA HỌC VÀ HỢP TÁC QUỐC TẾ</div>
                             <div className={`${roboto.className} drop-shadow-md`}>RESEARCH ADMINISTRATION AND INTERNATIONAL RELATION OFFICE</div>
                         </div>
-                        <div className="md:ml-[80px] ml-12 flex flex-row gap-5 items-center justify-center">
+                        <div className="flex flex-row gap-5 items-center justify-center">
                                 <div className="relative flex items-center w-full h-8 rounded-2xl focus-within:shadow-lg bg-white overflow-hidden">
                                     <div className="grid place-items-center h-full w-12 text-gray-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

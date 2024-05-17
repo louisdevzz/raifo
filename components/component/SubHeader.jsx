@@ -89,7 +89,7 @@ export default function SubHeader(){
         }
     ]
     return(
-        <div className='hidden container max-w-screen-3xl mx-auto md:flex flex-row px-[75px] gap-5'>
+        <div className='hidden xl:max-w-screen-2xl lg:max-w-screen-xl max-w-screen-lg mx-auto md:flex flex-row md:px-4 lg:px-10 xl:px-[75px] gap-5'>
             <a href='/' className='bg-[#164b8e] w-[40px] p-2 flex justify-center items-center'>
                 <CIcon icon={cilHome} style={{width:"30px",color:"#ffffff"}}/>
             </a>

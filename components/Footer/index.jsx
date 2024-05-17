@@ -8,9 +8,9 @@ const Title = roboto.className;
 export default function Footer(){
     return(
         <div>
-            <div className="bg-gray-100 h-full py-10 md:px-[250px] px-5 mt-[200px]">
-                <div className="container max-w-screen-3xl mx-auto md:px-2 ">
-                    <div className="flex md:flex-row flex-col gap-[2rem]">
+            <div className="bg-gray-100 h-full py-10 px-5 mt-[200px]">
+                <div className="xl:max-w-screen-2xl lg:max-w-screen-xl max-w-screen-lg mx-auto lg:px-12 ">
+                    <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-1">
                         <div className="flex flex-col">
                             <h1 className={`${Title} text-xl py-2 border-b border-[#6a6764] w-full md:w-[250px]`}>Thông Tin</h1>
                             <div className="mt-5">
