@@ -39,4 +39,14 @@ const createUser = async(user,pass,fullname,email) => {
     return result;
 };
 
-export {isLogin,createUser}
+const loadScientificArticle = async() =>{
+    const data = await fetch("/api/scientific-article");
+    const result = await data.json();
+    return result;
+}
+
+export {
+    isLogin,
+    createUser,
+    loadScientificArticle
+}

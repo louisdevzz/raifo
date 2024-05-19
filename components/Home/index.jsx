@@ -1,5 +1,15 @@
 'use client'
+
+import { useEffect, useState } from "react";
+import { loadScientificArticle } from "../../hooks/SDK";
+
 export default function Home(){
+    const [scientificArticle,setScientificArticle] = useState([]);
+    useEffect(()=>(
+        async function (){
+            setScientificArticle(await loadScientificArticle())
+        }
+    ),[])
     const formatString = (str) =>{
         if(str.length > 63){
             return str.slice(0,63)+"..."
@@ -15,6 +25,7 @@ export default function Home(){
             return str;
         }
     }
+    console.log(scientificArticle)
     return(
         <div>
             <div className="md:mt-10 mt-2">
@@ -51,20 +62,21 @@ export default function Home(){
                                 <h1 className="font-bold">BÀI BÁO KHOA HỌC</h1>
                             </div>
                         </div>
-                        <div className="mt-5 flex flex-col gap-3 text-base">
-                            <div className="font-medium flex flex-row">
-                                <strong className="mr-2">225.</strong>
-                                <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                            </div>
-                            <div className="font-medium flex flex-row">
-                                <strong className="mr-2">225.</strong>
-                                <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                            </div>
-                            <div className="mt-4 border-t-2 border-[#2a5389] text-right">
-                                <a href="/congtrinhnghiencuu/baibaokhoahoc">
-                                    <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
-                                </a>
-                            </div>
+                        <div className="mt-5 flex flex-col gap-3 h-72 text-base">
+                            {scientificArticle.slice(0,2).map((dt,i)=>(
+                                <div className="font-medium flex flex-row">
+                                    <strong className="mr-2">{i+1}.</strong>
+                                    <div>
+                                        <p>{dt.writer}	&ensp;({dt.years}).&ensp;{dt.content}&ensp;{dt.volume}</p>
+                                        {dt.link&& <a className="text-green-500" href={dt.link}>{dt.link}</a>}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>                      
+                        <div className="mt-4 border-t-2 border-[#2a5389] text-right">
+                            <a href="/congtrinhnghiencuu/baibaokhoahoc">
+                                <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +87,7 @@ export default function Home(){
                                 <h1 className="font-bold">ĐỀ TÀI NGHIÊN CỨU</h1>
                             </div>
                         </div>
-                        <div className="mt-5 flex flex-col gap-5 text-base">
+                        <div className="mt-5 flex flex-col gap-5 h-72 text-base">
                             <div className="font-medium">
                                 <p>{formatString("Kiến thức, thái độ và thực hành về tiêm phòng cúm mùa của sinh viên Khoa Y Trường Đại học Tân Tạo.")}</p>
                             </div>
@@ -88,11 +100,11 @@ export default function Home(){
                             <div className="font-medium">
                                 <p>{formatString("Tổng hợp nano bạc bằng phương pháp sinh học sử dụng dịch chiết của thực vật và khảo sát hoạt tính kháng khuẩn của hạt nano.")}</p>
                             </div>
-                            <div className="mt-2 border-t-2 border-[#2a5389] text-right">
-                                <a href="/congtrinhnghiencuu/detainghiencuu">
-                                    <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
-                                </a>
-                            </div>
+                        </div>
+                        <div className="mt-4 border-t-2 border-[#2a5389] text-right">
+                            <a href="/congtrinhnghiencuu/detainghiencuu">
+                                <p className="py-3 text-[#183a66] font-semibold">Xem thêm &gt;</p>
+                            </a>
                         </div>
                     </div>
                 </div>

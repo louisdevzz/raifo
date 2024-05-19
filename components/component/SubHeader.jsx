@@ -2,7 +2,8 @@
 import CIcon from '@coreui/icons-react';
 import { cilHome } from '@coreui/icons';
 import { useState,useEffect } from 'react';
-import { url } from '../../utils/config';
+import { NewsPaper,SManagement,InalCooperation } from '../../utils/utils';
+import { DropDownMenu } from '../component/DropDownMenu'
 
 export default function SubHeader(){
     const [fullname, setFullname] = useState('');
@@ -15,79 +16,7 @@ export default function SubHeader(){
         localStorage.removeItem("fullname");
         location.replace(location.href);
     }
-    const NewsPaper = [
-        {
-            title:"TTU Review",
-            url: url.tapchikhoahoc.ttuReview
-        },
-        {
-            title:"TJBS",
-            url: url.tapchikhoahoc.tjbs
-        }
-    ];
-    const SManagement = [
-        {
-            title:"Công trình nghiên cứu",
-            children:[
-                {
-                    name:"Bài báo khoa học",
-                    url: url.quanlykhoahoc.congtrinhnghiencuu.baibaokhoahoc
-                },
-                {
-                    name:"Bài báo hội thảo",
-                    url: url.quanlykhoahoc.congtrinhnghiencuu.baibaohoithao
-                },
-                {
-                    name:"Đề tài nghiên cứu",
-                    url: url.quanlykhoahoc.congtrinhnghiencuu.detainghiencuu
-                }
-            ]
-        },
-        {
-            title:"Hoạt động khoa học",
-            children:[
-                {
-                    name:"Seminar",
-                    url:url.quanlykhoahoc.hoatdongkhoahoc.seminar
-                },
-                {
-                    name:"Tin tức - sự kiện",
-                    url:url.quanlykhoahoc.hoatdongkhoahoc.tintucsukien
-                }
-            ]
-        }
-    ];    
-    const InalCooperation = [
-        {
-            title:"Chương trình hợp tác quốc tế",
-            url: url.hoptacquocte.cthoptacquocte
-        },
-        {
-            title:"Mạng lưới hợp tác",
-            url: url.hoptacquocte.mangluoihoptac
-        },
-        {
-            title:"Dự án quốc tế",
-            url: url.hoptacquocte.duanquocte
-        },
-        {
-            title:"Trao đổi sinh viên",
-            children:[
-                {
-                    name:"Điều kiện",
-                    url: url.hoptacquocte.traodoisinhvien.dieukien
-                },
-                {
-                    name:"Các trường đối tác",
-                    url: url.hoptacquocte.traodoisinhvien.doitac
-                },
-                {
-                    name:"Sinh viên quốc tế",
-                    url: url.hoptacquocte.traodoisinhvien.sinhvienquocte
-                }
-            ]
-        }
-    ]
+
     return(
         <div className='hidden xl:max-w-screen-2xl lg:max-w-screen-xl max-w-screen-lg mx-auto md:flex flex-row md:px-4 lg:px-10 xl:px-[75px] gap-5'>
             <a href='/' className='bg-[#164b8e] w-[40px] p-2 flex justify-center items-center'>
@@ -136,45 +65,3 @@ export default function SubHeader(){
     )
 }
 
-const DropDownMenu = ({title,children}) =>{
-    return(
-        <div className='duration-500 transition-all'>
-            <div className='cursor-pointer py-2 flex flex-row gap-2 items-center'>
-                <span>{title}</span>
-                <img src='/images/arrow-down.svg' width={10}/>
-            </div>
-            <div className='absolute w-[170px] invisible group-hover:visible border-t-4 bg-white drop-shadow-xl border-[#183762]  text-sm leading-loose'>
-                <ul className='relative z-10'>
-                    {children.map((dt,index)=>{
-                        if(dt.url){
-                            return(
-                                <li key={index} className='hover:bg-[#183762] hover:text-white px-3 py-2'><a target='_blank' href={dt.url}>{dt.title}</a></li>
-                            )
-                        }else{
-                            return(
-                                <DropDownMenuChildren key={index} title={dt.title} children={dt.children}/>
-                            )
-                        }
-                    })}
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-const DropDownMenuChildren = ({title,children}) =>{
-    return(
-        <div>
-            <div className='group/item'>
-                <div className='cursor-pointer py-2 hover:bg-[#183762] hover:text-white px-2'>{title}</div>
-                <div className='absolute w-[250px] translate-x-[170px] -translate-y-[48px] invisible group-hover/item:visible border-t-4 bg-white drop-shadow-xl border-[#183762]  text-sm leading-loose'>
-                    <ul className='z-10'>
-                        {children.map((dt,index)=>(
-                            <li key={index} className='hover:bg-[#183762] hover:text-white px-3 py-2'><a href={dt.url}>{dt.name}</a></li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    )
-}
