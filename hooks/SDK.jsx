@@ -40,7 +40,7 @@ const createUser = async(user,pass,fullname,email) => {
 };
 
 const loadScientificArticle = async() =>{
-    const data = await fetch("/api/scientific-article");
+    const data = await fetch("https://research-ttu.vercel.app/api/scientific-article");
     const result = await data.json();
     return result;
 }

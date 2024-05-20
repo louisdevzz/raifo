@@ -1,12 +1,12 @@
 import { url } from './config';
 const NewsPaper = [
     {
-        title:"TTU Review",
-        url: url.tapchikhoahoc.ttuReview
-    },
-    {
         title:"TJBS",
         url: url.tapchikhoahoc.tjbs
+    },
+    {
+        title:"TTU Review",
+        url: url.tapchikhoahoc.ttuReview
     }
 ];
 const SManagement = [
