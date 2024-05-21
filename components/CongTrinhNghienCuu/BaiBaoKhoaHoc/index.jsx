@@ -49,10 +49,7 @@ export default function BaiBaoKhoaHoc(){
                         {scientificArticle.map((dt,i)=>(
                                 <div className="font-medium flex flex-row">
                                     <strong className="mr-2">{i+1}.</strong>
-                                    <div>
-                                        <p>{dt.writer}	&ensp;({dt.years}).&ensp;{dt.content}&ensp;{dt.volume}</p>
-                                        {dt.link&& <p>{dt.link}</p>}
-                                    </div>
+                                    <div className="" dangerouslySetInnerHTML={{__html:dt.content}}/>
                                 </div>
                             ))}
                     </div>

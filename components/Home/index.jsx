@@ -53,7 +53,7 @@ export default function Home(){
                 <p>The TTU Journal of Biomedical Sciences (TJBS) is a new peer-reviewed journal covering all areas of Biomedical Research published by Tan Tao University. The TJBS aims to launch the first issue in October 2022. We expect you could make an excellent contribution based on your expertise and recent achievements in the following areas: clinical science, dental, nursing, other related medical fields, and biotechnology.</p>
             </div>
             <div className="grid md:grid-cols-4 grid-cols-1 md:gap-5 mt-10">
-                <div className="mt-2 md:mt-0 w-full md:h-[500px] h-full md:col-span-1">
+                <div className="mt-2 md:mt-0 w-full h-[500px] md:col-span-1">
                     <div className="flex items-center flex-col">
                         <div className="border border-gray-200 w-full">
                             <div className="text-center border-t-2 border-[#183762] py-3">
@@ -84,10 +84,7 @@ export default function Home(){
                             {scientificArticle.slice(0,2).map((dt,i)=>(
                                 <div className="font-medium flex flex-row" key={i}>
                                     <strong className="mr-2">{i+1}.</strong>
-                                    <div>
-                                        <p>{dt.writer}	&ensp;({dt.years}).&ensp;{dt.content}&ensp;{dt.volume}</p>
-                                        {dt.link&& <a className="text-green-500" href={dt.link}>{dt.link}</a>}
-                                    </div>
+                                    <div dangerouslySetInnerHTML={{__html:dt.content}}/>
                                 </div>
                             ))}
                         </div>                      
