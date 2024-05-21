@@ -41,13 +41,15 @@ const createUser = async(user,pass,fullname,email) => {
 };
 
 const loadScientificArticle = async() =>{
-    const data = await axios.get("/api/scientific-article",{
-        headers:{
-            Accept:"application/json",
-            "Content-Type":"application/json"
+    const data = await fetch("/api/scientific-article",{
+        method:"GET",
+        mode:"cors",
+        headers: {
+            "Content-Type": "application/json",
         }
     });
-    return data.data;
+    const result = await data.json();
+    return result;
 }
 
 export {
