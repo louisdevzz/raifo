@@ -40,20 +40,7 @@ const createUser = async(user,pass,fullname,email) => {
     return result;
 };
 
-const loadScientificArticle = async() =>{
-    const data = await fetch("/api/scientific-article",{
-        method:"GET",
-        mode:"cors",
-        headers: {
-            "Content-Type": "application/json",
-        }
-    });
-    const result = await data.json();
-    return result;
-}
-
 export {
     isLogin,
-    createUser,
-    loadScientificArticle
+    createUser
 }

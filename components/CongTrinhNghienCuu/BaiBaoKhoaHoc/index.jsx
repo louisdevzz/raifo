@@ -1,14 +1,23 @@
 'use client'
 import { useEffect, useState } from "react";
-import { loadScientificArticle } from "../../../hooks/SDK";
+
 
 export default function BaiBaoKhoaHoc(){
     const [scientificArticle,setScientificArticle] = useState([]);
-    useEffect(()=>(
-        async function (){
-            setScientificArticle(await loadScientificArticle())
-        }
-    ),[])
+    async function loadData(){
+        const data = await fetch("/api/scientific-article",{
+            method:"GET",
+            mode:"cors",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        const result = await data.json();
+        setScientificArticle(result)
+    }
+    useEffect(()=>{
+        loadData()
+    },[])
     function formatString(str){
         if(str.length > 63){
             return str.slice(0,63)+"..."
@@ -37,7 +46,7 @@ export default function BaiBaoKhoaHoc(){
                 <div className="mt-5">
                     <p className="font-bold text-2xl">2023</p>
                     <div className="flex flex-col gap-5 mt-2">
-                        {scientificArticle.slice(0,2).map((dt,i)=>(
+                        {scientificArticle.map((dt,i)=>(
                                 <div className="font-medium flex flex-row">
                                     <strong className="mr-2">{i+1}.</strong>
                                     <div>

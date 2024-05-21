@@ -1,4 +1,21 @@
+'use client'
+import { useState,useEffect } from "react";
 export default function BaiBaoHoiThao(){
+    const [conferencePaper,setConferencePaper] = useState([]);
+    async function loadData(){
+        const data = await fetch("/api/conference-paper",{
+            method:"GET",
+            mode:"cors",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        const result = await data.json();
+        setConferencePaper(result)
+    }
+    useEffect(()=>{
+        loadData()
+    },[])
     function formatString(str){
         if(str.length > 63){
             return str.slice(0,63)+"..."
@@ -15,7 +32,7 @@ export default function BaiBaoHoiThao(){
         }
     }
     return(
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
                 <div className="flex justify-start items-start">
                     <div className="border border-gray-200 w-full">
@@ -27,22 +44,19 @@ export default function BaiBaoHoiThao(){
                 <div className="mt-5">
                     <p className="font-bold text-2xl">2023</p>
                     <div className="flex flex-col gap-5 mt-2">
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                        </div>
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                        </div>
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                        </div>
+                        {conferencePaper.map((dt,i)=>(
+                                <div className="font-medium flex flex-row">
+                                    <strong className="mr-2">{i+1}.</strong>
+                                    <div>
+                                        <p>{dt.writer}	&ensp;({dt.years}).&ensp;{dt.content}&ensp;{dt.volume}</p>
+                                        {dt.link&& <p>{dt.link}</p>}
+                                    </div>
+                                </div>
+                            ))}
                     </div>
                 </div>
             </div>
-            <div className="col-span-1 w-[80%] flex flex-col gap-20">
+            <div className="col-span-1 mt-12 md:ml-12 md:mt-0 md:w-[80%] flex flex-col gap-20">
                 <div>
                     <div className="flex justify-start items-start">
                         <div className="border border-gray-200 w-full">
@@ -63,12 +77,10 @@ export default function BaiBaoHoiThao(){
                         </p>
                     </div>
                 </div>
-                <div>
-                    <div className="flex justify-start items-start">
-                        <div className="border border-gray-200 w-full">
-                            <div className="text-center border-t-2 border-[#183762] py-3">
-                                <h1 className="font-bold">THÔNG BÁO</h1>
-                            </div>
+                <div className="flex w-full justify-start items-start h-72">
+                    <div className="border border-gray-200 w-full">
+                        <div className="text-center border-t-2 border-[#183762] py-3">
+                            <h1 className="font-bold">THÔNG BÁO</h1>
                         </div>
                     </div>
                 </div>

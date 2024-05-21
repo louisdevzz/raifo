@@ -1,4 +1,25 @@
+'use client'
+import { useState,useEffect } from "react"
+
 export default function DeTaiNghienCuu(){
+    const [titleResearch, setTitleResearch] = useState([]);
+    const [titleResearchStudent, setTitleResearchStudent] = useState([]);
+    async function loadData(){
+        const trs = await fetch("/api/title-research",{
+            method:"GET",
+            mode:"cors",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        const rs = await trs.json();
+        const student = rs.filter((data)=>data.job == "student")
+        setTitleResearchStudent(student);
+        setTitleResearch(rs)
+    }
+    useEffect(()=>{
+        loadData()
+    },[])
     return(
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
             <div className="col-span-1">
@@ -10,21 +31,29 @@ export default function DeTaiNghienCuu(){
                     </div>
                 </div>
                 <div className="mt-5">
-                    <p className="font-bold text-2xl">2023</p>
-                    <div className="flex flex-col gap-5 mt-2">
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
+                    {titleResearch.map((dt,i)=>(
+                        <div className="mt-3 flex flex-col gap-3" key={i}>
+                            <div className="flex flex-row">
+                                <strong className="mr-2">1.</strong>
+                                <p>{dt.title}</p>
+                            </div>
+                            <p className="mt-3">({dt.titleEN})</p>
+                            <div className="mt-3">
+                                <div className="flex flex-row">
+                                    <strong className="mr-2">Mã số: </strong>
+                                    <p>{dt.volume}</p>
+                                </div>
+                                <div className="flex flex-row">
+                                    <strong className="mr-2">Người tham gia: </strong>
+                                    <p>{dt.writer}</p>
+                                </div>
+                                <div className="flex flex-row">
+                                    <strong className="mr-2">Chương trình tài trợ: </strong>
+                                    <p>{dt.sponorship}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                        </div>
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
             <div className="col-span-1">
@@ -36,21 +65,29 @@ export default function DeTaiNghienCuu(){
                     </div>
                 </div>
                 <div className="mt-5">
-                    <p className="font-bold text-2xl">2023</p>
-                    <div className="flex flex-col gap-5 mt-2">
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
+                    {titleResearchStudent.length > 0 && titleResearchStudent.map((dt,i)=>(
+                        <div className="mt-3 flex flex-col gap-3" key={i}>
+                            <div className="flex flex-row">
+                                <strong className="mr-2">1.</strong>
+                                <p>{dt.title}</p>
+                            </div>
+                            <p className="mt-3">({dt.titleEN})</p>
+                            <div className="mt-3">
+                                <div className="flex flex-row">
+                                    <strong className="mr-2">Mã số: </strong>
+                                    <p>{dt.volume}</p>
+                                </div>
+                                <div className="flex flex-row">
+                                    <strong className="mr-2">Người tham gia: </strong>
+                                    <p>{dt.writer}</p>
+                                </div>
+                                <div className="flex flex-row">
+                                    <strong className="mr-2">Chương trình tài trợ: </strong>
+                                    <p>{dt.sponorship}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                        </div>
-                        <div className="flex flex-row">
-                            <p className="mr-5">255.</p>
-                            <p>Vien T. Truong., Tam Ngo., Hoang N.H. Duong., Vivek Patel.,Phan Q. Dai., Mansoor Ahmad., Krunalkumar Patel., Abhishek Dutta., Amna Khan., Syed Muhammad Usama., Minh A. Vo., Devendra Tripathi. (2023). Revascularization In Patients With Ischemic Cardiomyopathy And Viability: A Meta-analysis Of Randomized Controlled Trials. Abstract, Control # 2023-SS-A-16558-AHA.</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
