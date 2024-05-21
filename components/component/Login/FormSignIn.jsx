@@ -23,6 +23,7 @@ export default function FormSignIn({setIsCreate}){
 
     const handleLogin = async () => {
         const [isCheck,result] = await isLogin(user,pass);
+        console.log(result);
         localStorage.setItem("fullname",result[0].fullname)
         if(isCheck){
             location.replace(location.href);

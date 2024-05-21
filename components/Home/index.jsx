@@ -7,6 +7,7 @@ export default function Home(){
     const [scientificArticle,setScientificArticle] = useState([]);
     useEffect(()=>(
         async function (){
+            console.log("a",await loadScientificArticle())
             setScientificArticle(await loadScientificArticle())
         }
     ),[])
@@ -64,7 +65,7 @@ export default function Home(){
                         </div>
                         <div className="mt-5 flex flex-col gap-3 h-72 text-base">
                             {scientificArticle.slice(0,2).map((dt,i)=>(
-                                <div className="font-medium flex flex-row">
+                                <div className="font-medium flex flex-row" key={i}>
                                     <strong className="mr-2">{i+1}.</strong>
                                     <div>
                                         <p>{dt.writer}	&ensp;({dt.years}).&ensp;{dt.content}&ensp;{dt.volume}</p>

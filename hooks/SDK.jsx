@@ -47,7 +47,6 @@ const loadScientificArticle = async() =>{
             "Content-Type":"application/json"
         }
     });
-    // const result = await data.json();
     return data.data;
 }
 
