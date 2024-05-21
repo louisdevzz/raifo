@@ -1,3 +1,4 @@
+import axios from "axios";
 const isLogin = async(user,pass) => {
     const userObj = {
         user:user,
@@ -40,9 +41,14 @@ const createUser = async(user,pass,fullname,email) => {
 };
 
 const loadScientificArticle = async() =>{
-    const data = await fetch("https://research-ttu.vercel.app/api/scientific-article");
-    const result = await data.json();
-    return result;
+    const data = await axios.get("/api/scientific-article",{
+        headers:{
+            Accept:"application/json",
+            "Content-Type":"application/json"
+        }
+    });
+    // const result = await data.json();
+    return data.data;
 }
 
 export {
