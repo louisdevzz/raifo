@@ -5,12 +5,21 @@ import { loadScientificArticle } from "../../hooks/SDK";
 
 export default function Home(){
     const [scientificArticle,setScientificArticle] = useState([]);
-    useEffect(()=>(
-        async function (){
-            console.log("a",await loadScientificArticle())
-            setScientificArticle(await loadScientificArticle())
-        }
-    ),[])
+    async function loadData(){
+        const data = await fetch("/api/scientific-article",{
+            method:"GET",
+            mode:"cors",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        const result = await data.json();
+        console.log(result)
+        setScientificArticle(result)
+    }
+    useEffect(()=>{
+        loadData()
+    },[])
     const formatString = (str) =>{
         if(str.length > 63){
             return str.slice(0,63)+"..."
