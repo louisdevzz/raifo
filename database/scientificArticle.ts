@@ -1,9 +1,9 @@
 import clientPromise from "./db"
 
 
-let client;
-let dbs;
-let scientificArticle;
+let client:any;
+let dbs:any;
+let scientificArticle:any;
 
 async function init(){
     if(dbs) return;
@@ -21,7 +21,7 @@ async function init(){
     await init()
 })()
 
-async function createScientificArticle(content,idx){
+async function createScientificArticle(content: string,idx: string){
     try{
         if(!scientificArticle) await init();
         const rs = await scientificArticle.insertOne({

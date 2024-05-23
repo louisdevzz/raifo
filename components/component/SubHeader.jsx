@@ -39,7 +39,7 @@ export default function SubHeader(){
                         <DropDownMenu title={"Hợp tác quốc tế"} children={InalCooperation}/>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href="/bieumau">
                             <div className='py-2 cursor-pointer'>Văn bản - Biểu mẫu</div>
                         </a>
                     </li>

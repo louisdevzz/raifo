@@ -1,9 +1,9 @@
 import clientPromise from "./db"
 
 
-let client;
-let dbs;
-let users;
+let client:any;
+let dbs:any;
+let users:any;
 
 async function init(){
     if(dbs) return;
@@ -21,7 +21,7 @@ async function init(){
     await init()
 })()
 
-async function checkLogin(user,pass){
+async function checkLogin(user:string,pass:string){
     try{
         if(!users) await init();
         const result = await users
@@ -33,7 +33,7 @@ async function checkLogin(user,pass){
     }
 }
 
-async function createUser(username,passowrd,fullname,email){
+async function createUser(username:string,passowrd:string,fullname:string,email:string){
     try{
         if(!users) await init();
         const randomNumber = Math.floor(Math.random() * 100) + 1;

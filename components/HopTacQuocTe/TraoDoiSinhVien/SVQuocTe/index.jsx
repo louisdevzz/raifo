@@ -1,19 +1,6 @@
+"use client"
+import Events from "@/components/events";
 export default function SinhVienQuocTeCP(){
-    const formatString = (str) => {
-        if(str.length > 63){
-            return str.slice(0,63)+"..."
-        }else{
-            return str;
-        }
-    }
-    
-    const formatStringDescription = (str) =>{
-        if(str.length > 159){
-            return str.slice(0,159)+"..."
-        }else{
-            return str;
-        }
-    }
     return(
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
@@ -24,29 +11,24 @@ export default function SinhVienQuocTeCP(){
                         </div>
                     </div>
                 </div>
-                
-            </div>
-            <div className="col-span-1 mt-12 md:mt-0 md:w-[80%] flex flex-col gap-20">
-                <div>
-                    <div className="flex justify-start items-start">
-                        <div className="border border-gray-200 w-full">
-                            <div className="text-center border-t-2 border-[#183762] py-3">
-                                <h1 className="font-bold">TIN TỨC - SỰ KIỆN</h1>
-                            </div>
+                <div className="w-full mt-10">
+                    <div className="w-full flex flex-col lg:flex-row gap-8 items-start justify-start">
+                        <div className="w-2/12">
+                            <img src="https://ttu.edu.vn/wp-content/uploads/2017/03/Tan-Tao-University.jpg" alt="1" />
                         </div>
-                    </div>
-                    <div className="flex items-center flex-col mt-5">
-                        <a target="_blank" href="https://ttu.edu.vn/nang-cao-nhan-thuc-ve-tam-quan-trong-cua-cac-ky-nang-the-ky-21-cho-sinh-vien-4cs/" className="flex items-center flex-col">
-                            <img src="https://ttu.edu.vn/wp-content/uploads/2024/04/Thmbnail-324x235.jpg" className="w-full"/>
-                            <div className="text-xl text-wrap mt-2">
-                                <h3>{formatString("Nâng cao nhận thức về tầm quan trọng của các kỹ năng Thế kỷ 21 cho sinh viên: 4C’s")}</h3>
+                        <a href="#" className="flex flex-col gap-3 lg:flex-row items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="mt-2" width="10" height="10" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
+                            <div className="flex flex-col gap-1">
+                                <p className="text-lg font-semibold">Danh sách sinh viên quốc tế</p>
+                                <small>12-08-2018</small>
+                                <small>Danh sách sinh viên quốc tế</small>
                             </div>
                         </a>
-                        <p className="mt-2 text-gray-600">
-                            <small>{formatStringDescription("Sáng ngày 25/04/2024, Đại học Tân Tạo đã tổ chức hội thảo chuyên đề với chủ đề “Kỹ năng Thế kỷ 21 và vai trò của chúng trong sự thành công ở hiện tại và trong tương lai của học sinh, sinh viên”.")}</small>
-                        </p>
                     </div>
                 </div>
+            </div>
+            <div className="col-span-1 mt-12 md:mt-0 md:w-[80%] flex flex-col gap-20">
+                <Events/>
                 <div>
                     <div className="flex justify-start items-start">
                         <div className="border border-gray-200 w-full">

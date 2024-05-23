@@ -1,14 +1,14 @@
 "use client"
 import Events from "@/components/events";
 
-export default function MLHopTacCP(){
+export default function BieuMauCP(){
     return(
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
                 <div className="flex justify-start items-start">
                     <div className="border border-gray-200 w-full">
                         <div className="text-center border-t-2 border-[#183762] py-3">
-                            <h1 className="font-bold">MẠNG LƯỚI HỌP TÁC</h1>
+                            <h1 className="font-bold">VĂN BẢN - BIỂU MẪU</h1>
                         </div>
                     </div>
                 </div>
@@ -20,20 +20,18 @@ export default function MLHopTacCP(){
                                 <table className="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
                                 <thead>
                                     <tr>
-                                    <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">STT</th>
-                                    <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">Năm</th>
-                                    <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">Quốc Gia</th>
-                                    <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">Trường Đại Học</th>
-                                    <th scope="col" className="px-6 py-3 text-end text-md font-extrabold uppercase dark:text-neutral-500">Loại</th>
+                                        <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">STT</th>
+                                        <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">Tiêu Đề</th>
+                                        <th scope="col" className="px-6 py-3 text-start text-md whitespace-nowrap font-extrabold uppercase dark:text-neutral-500">Danh Mục</th>
+                                        <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">File</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="odd:bg-white even:bg-gray-100 dark:odd:bg-neutral-900 dark:even:bg-neutral-800">
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">1</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">2020</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-black font-semibold dark:text-neutral-200">Taiwan</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">National Chung Hsing University</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">MOU</td>
+                                        <td className="px-6 py-4 text-sm font-medium text-gray-800 dark:text-neutral-200">Quy định quản lý hoạt động khoa học và công nghệ của Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">Quy định</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">1</td>
                                     </tr>
                                 </tbody>
                                 </table>

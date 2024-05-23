@@ -1,4 +1,4 @@
-import CTHopTacQuocTeCP from "../../../components/HopTacQuocTe/CTHopTacQuocTe";
+import CTHopTacQuocTeCP from "@/components/HopTacQuocTe/CTHopTacQuocTe";
 
 export default function CTHopTacQuocTe(){
     return(

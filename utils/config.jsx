@@ -24,5 +24,6 @@ export const url = {
             doitac:"/hoptacquocte/traodoisinhvien/doitac",
             sinhvienquocte:"/hoptacquocte/traodoisinhvien/sinhvienquocte"
         }
-    }
+    },
+    bieumau:"/bieumau"
 }

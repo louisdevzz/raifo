@@ -1,9 +1,9 @@
 import clientPromise from "./db"
 
 
-let client;
-let dbs;
-let event;
+let client:any;
+let dbs:any;
+let event:any;
 
 async function init(){
     if(dbs) return;
@@ -22,7 +22,7 @@ async function init(){
 })()
 
 
-async function createEventPost(content ,title, image){
+async function createEventPost(content: string ,title: string, image: string){
     try{
         if(!event) await init();
         const rs = await event.insertOne({
@@ -36,7 +36,7 @@ async function createEventPost(content ,title, image){
     }
 }
 
-async function loadEventBySlug(slug){
+async function loadEventBySlug(slug: string){
     try{
         if(!event) await init();
         const result = await event.find({slug:{$eq:slug}}).toArray();

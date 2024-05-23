@@ -1,9 +1,9 @@
 import clientPromise from "./db"
 
 
-let client;
-let dbs;
-let conferencePaper;
+let client:any;
+let dbs:any;
+let conferencePaper:any;
 
 async function init(){
     if(dbs) return;
@@ -22,7 +22,7 @@ async function init(){
 })()
 
 
-async function createConferencePaper(content,idx){
+async function createConferencePaper(content: string,idx: string){
     try{
         if(!conferencePaper) await init();
         const rs = await conferencePaper.insertOne({

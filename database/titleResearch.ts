@@ -1,9 +1,9 @@
 import clientPromise from "./db"
 
 
-let client;
-let dbs;
-let research;
+let client:any;
+let dbs:any;
+let research:any;
 
 async function init(){
     if(dbs) return;
@@ -22,7 +22,7 @@ async function init(){
 })()
 
 
-async function createTilteResearch(idx,title, titleEN,writer ,volume ,sponorship ){
+async function createTilteResearch(idx:string,title:string, titleEN:string,writer:string ,volume:string ,sponorship:string ){
     try{
         if(!research) await init();
         const rs = await research.insertOne({
