@@ -1,7 +1,24 @@
 "use client"
 import Events from "@/components/events";
+import { useEffect,useState } from "react";
 
 export default function BieuMauCP(){
+    const [form,setForm] = useState([]);
+    async function loadData(){
+        const data = await fetch("/api/form",{
+            method:"GET",
+            mode:"cors",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        const result = await data.json();
+        setForm(result)
+    }
+    useEffect(()=>{
+        loadData()
+    },[])
+    console.log(form)
     return(
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
@@ -27,12 +44,21 @@ export default function BieuMauCP(){
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="odd:bg-white even:bg-gray-100 dark:odd:bg-neutral-900 dark:even:bg-neutral-800">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">1</td>
-                                        <td className="px-6 py-4 text-sm font-medium text-gray-800 dark:text-neutral-200">Quy định quản lý hoạt động khoa học và công nghệ của Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">Quy định</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">1</td>
-                                    </tr>
+                                    {form.map((dt,i)=>{
+                                        const file = dt.file
+                                        const blob = new Blob([file],{type: "application/pdf"});
+                                        const url = URL.createObjectURL(blob)
+                                        return(
+                                            <tr className="odd:bg-white even:bg-gray-100 dark:odd:bg-neutral-900 dark:even:bg-neutral-800">
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{dt.idx}</td>
+                                                <td className="px-6 py-4 text-sm font-medium text-gray-800 dark:text-neutral-200">{dt.title}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">{dt.category}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                    <a href={url} download={"Van-ban-bieu-mau.pdf"}>File</a>
+                                                </td>
+                                            </tr>
+                                        )
+                                    })}
                                 </tbody>
                                 </table>
                             </div>
