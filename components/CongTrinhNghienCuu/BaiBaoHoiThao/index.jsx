@@ -1,4 +1,5 @@
 'use client'
+import { formatString,formatStringDescription,reverseArr } from "@/hooks/Tool";
 import { useState,useEffect } from "react";
 export default function BaiBaoHoiThao(){
     const [conferencePaper,setConferencePaper] = useState([]);
@@ -16,21 +17,7 @@ export default function BaiBaoHoiThao(){
     useEffect(()=>{
         loadData()
     },[])
-    function formatString(str){
-        if(str.length > 63){
-            return str.slice(0,63)+"..."
-        }else{
-            return str;
-        }
-    }
-    
-    function formatStringDescription(str){
-        if(str.length > 159){
-            return str.slice(0,159)+"..."
-        }else{
-            return str;
-        }
-    }
+
     return(
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
@@ -42,15 +29,11 @@ export default function BaiBaoHoiThao(){
                     </div>
                 </div>
                 <div className="mt-5">
-                    <p className="font-bold text-2xl">2023</p>
                     <div className="flex flex-col gap-5 mt-2">
-                        {conferencePaper.map((dt,i)=>(
-                                <div className="font-medium flex flex-row">
-                                    <strong className="mr-2">{i+1}.</strong>
-                                    <div>
-                                        <p>{dt.writer}	&ensp;({dt.years}).&ensp;{dt.content}&ensp;{dt.volume}</p>
-                                        {dt.link&& <p>{dt.link}</p>}
-                                    </div>
+                        {reverseArr(conferencePaper).map((dt,i)=>(
+                                <div className="font-medium flex flex-row" key={i}>
+                                    <strong className="mr-2">{dt.idx}.</strong>
+                                    <div dangerouslySetInnerHTML={{__html:dt.content}}/>
                                 </div>
                             ))}
                     </div>

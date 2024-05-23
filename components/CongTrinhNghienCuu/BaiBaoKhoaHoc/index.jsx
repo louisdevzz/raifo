@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-
+import {formatString,formatStringDescription,reverseArr} from '@/hooks/Tool';
 
 export default function BaiBaoKhoaHoc(){
     const [scientificArticle,setScientificArticle] = useState([]);
@@ -18,21 +18,7 @@ export default function BaiBaoKhoaHoc(){
     useEffect(()=>{
         loadData()
     },[])
-    function formatString(str){
-        if(str.length > 63){
-            return str.slice(0,63)+"..."
-        }else{
-            return str;
-        }
-    }
     
-    function formatStringDescription(str){
-        if(str.length > 159){
-            return str.slice(0,159)+"..."
-        }else{
-            return str;
-        }
-    }
     return(
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
@@ -46,9 +32,9 @@ export default function BaiBaoKhoaHoc(){
                 <div className="mt-5">
                     <p className="font-bold text-2xl">2023</p>
                     <div className="flex flex-col gap-5 mt-2">
-                        {scientificArticle.map((dt,i)=>(
-                                <div className="font-medium flex flex-row">
-                                    <strong className="mr-2">{i+1}.</strong>
+                        {reverseArr(scientificArticle).map((dt,i)=>(
+                                <div className="font-medium flex flex-row" key={i}>
+                                    <strong className="mr-2">{dt.idx}.</strong>
                                     <div className="" dangerouslySetInnerHTML={{__html:dt.content}}/>
                                 </div>
                             ))}

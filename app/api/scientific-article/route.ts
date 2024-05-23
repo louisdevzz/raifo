@@ -1,4 +1,4 @@
-import { loadScientificArticle } from "../../../database/content";
+import { loadScientificArticle } from "@/database/scientificArticle";
 
 export async function GET() {
 try{

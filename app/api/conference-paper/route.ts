@@ -1,4 +1,4 @@
-import { loadConferencePaper } from "@/database/content";
+import { loadConferencePaper } from "@/database/conferencePaper";
 
 export async function GET() {
 try{
