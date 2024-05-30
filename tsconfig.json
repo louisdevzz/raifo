@@ -30,7 +30,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "utils/config.jsx", "database/conferencePaper.ts", "database/titleResearch.ts", "database/scientificArticle.ts", "database/event.jsx"  ],
+, "utils/config.jsx", "database/conferencePaper.ts", "database/titleResearch.ts", "database/scientificArticle.ts", "database/event.jsx", "components/About/index.jsx"  ],
   "exclude": [
     "node_modules"
   ]

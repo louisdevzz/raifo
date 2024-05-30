@@ -1,31 +1,56 @@
-'use client'
-import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "../components/component/Header";
-import { useState } from "react";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
-const roboto = Roboto({ subsets: ["latin"],weight:"400" });
+export const metadata = {
+  title:{
+    default:"Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế",
+    template:"%s | Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế"
+  },
+  description:"Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế",
+  referrer: 'origin-when-cross-origin',
+  openGraph: {
+    title: 'Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế',
+    description: 'Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế Đại Học Tân Tạo',
+    url: 'https://research-ttu.vercel.app',
+    siteName: 'Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế',
+    images: '/background/background_home.jpg',
+  },
+  keywords: ['Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế', 'Đại Học Tân Tạo', 'Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế Đại Học Tân Tạo',"Phòng Hợp Tác Quốc Tế","Phòng Quản Lý Khoa Học"],
+  metadataBase: new URL('https://research-ttu.vercel.app'),
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'google',
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+  },
+  assets: ['https://research-ttu.vercel.app/assets'],
+  category: ['education','scientific research','cooperate'],
 
+}
 
 export default function RootLayout({ children }) {
-  const [open,setOpen] = useState(false);
-  const [isShow,setIsShow] = useState(false);
-
-  const isOpen = isShow?isShow:open;
 
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/assets/images/logo/logo.svg" />
-        <title>Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế</title>
+        <link rel="shortcut icon" href="/assets/images/logo/favicon.ico" />
       </head>
-      <body className={`${roboto.className} ${isOpen?"fixed right-0 left-0":""}`}>
-        <Header open={open} setOpen={setOpen} setIsShow={setIsShow} isShow={isShow}/>
-        <div className="xl:max-w-screen-2xl lg:max-w-screen-xl max-w-screen-lg mx-auto xl:mt-12 lg:px-10 xl:px-[75px] px-3 mt-5">
+      <body>
+        <Layout>
           {children}
-        </div>
-        <Footer/>
+        </Layout>
       </body>
     </html>
   );

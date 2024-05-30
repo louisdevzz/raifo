@@ -59,7 +59,7 @@ export default function Home(){
                         </div>
                         {events.length>0?events.slice(0,1).map((dt,i)=>(
                             <div className="flex items-center flex-col mt-5" key={i}>
-                                <a target="_blank" href={`/news/${dt.slug}`} className="flex items-center flex-col">
+                                <a href={`/news/${dt.slug}`} className="flex items-center flex-col">
                                     <img src={dt.image} className="w-full"/>
                                     <div className="text-lg text-wrap mt-2">
                                         <h3 className="font-semibold">{formatString(dt.title)}</h3>
