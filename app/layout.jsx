@@ -7,7 +7,6 @@ export const metadata = {
     template:"%s | Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế"
   },
   description:"Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế",
-  referrer: 'origin-when-cross-origin',
   openGraph: {
     title: 'Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế',
     description: 'Phòng Quản Lý Khoa Học và Hợp Tác Quốc Tế Đại Học Tân Tạo',
