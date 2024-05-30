@@ -2,7 +2,7 @@ import News from "@/components/News"
 
 export async function generateMetadata({ params}) {
     const id = params.slug
-    const result = await fetch("http://localhost:9001/api/events",{
+    const result = await fetch("https://research-ttu.vercel.app/api/events",{
         method:"POST",
         mode:"cors",
         headers: {
