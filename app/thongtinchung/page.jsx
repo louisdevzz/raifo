@@ -1,4 +1,4 @@
-import About from "../../components/About/index.jsx";
+import About from "@/components/About/index.jsx";
 
 export const metadata = {
     title:"Thông tin chung"

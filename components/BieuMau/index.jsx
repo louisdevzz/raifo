@@ -18,7 +18,6 @@ export default function BieuMauCP(){
     useEffect(()=>{
         loadData()
     },[])
-    console.log(form)
     return(
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             <div className="col-span-2">
@@ -34,7 +33,7 @@ export default function BieuMauCP(){
                         <div className="-m-1.5 overflow-x-auto">
                             <div className="p-1.5 min-w-full inline-block align-middle">
                             <div className="overflow-hidden">
-                                <table className="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+                                <table className="min-w-full divide-y divide-gray-200">
                                 <thead>
                                     <tr>
                                         <th scope="col" className="px-6 py-3 text-start text-md font-extrabold uppercase dark:text-neutral-500">STT</th>
@@ -49,11 +48,11 @@ export default function BieuMauCP(){
                                         const blob = new Blob([file],{type: "application/pdf"});
                                         const url = URL.createObjectURL(blob)
                                         return(
-                                            <tr className="odd:bg-white even:bg-gray-100 dark:odd:bg-neutral-900 dark:even:bg-neutral-800">
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{dt.idx}</td>
-                                                <td className="px-6 py-4 text-sm font-medium text-gray-800 dark:text-neutral-200">{dt.title}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">{dt.category}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                            <tr className="odd:bg-white even:bg-gray-100">
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">{dt.idx}</td>
+                                                <td className="px-6 py-4 text-sm font-medium text-gray-800 ">{dt.title}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">{dt.category}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
                                                     <a href={url} download={"Van-ban-bieu-mau.pdf"}>File</a>
                                                 </td>
                                             </tr>
@@ -67,7 +66,7 @@ export default function BieuMauCP(){
                         </div>
                 </div>
             </div>
-            <div className="col-span-1 mt-12 md:mt-0 md:w-[80%] flex flex-col gap-20">
+            <div className="col-span-1 ml-12 mt-12 md:mt-0 md:w-[80%] flex flex-col gap-20">
                 <Events/>
                 <div>
                     <div className="flex justify-start items-start">
